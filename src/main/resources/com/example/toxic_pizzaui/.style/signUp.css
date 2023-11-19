@@ -1,0 +1,33 @@
+.root{
+    -fx-background-color: #762f85;
+}
+
+.rectangle{
+
+     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 10, 0, 0, 0);
+     -fx-border-color: "white";
+}
+
+.button
+{
+    -fx-background-color: #F4C756;
+    -fx-border-radius: 5;
+}
+.button:hover
+{
+    -fx-background-color:  #F7DA4B;
+}
+
+.button:pressed
+{
+    -fx-background-color: #9038c7 ;
+}
+
+.textfield{
+    -fx-border-color:  #303331;
+}
+
+#passwordMessage{
+    -fx-text-inner-color: "red";
+}
+
