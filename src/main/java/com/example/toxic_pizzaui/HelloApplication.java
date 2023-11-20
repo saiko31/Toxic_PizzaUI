@@ -16,7 +16,7 @@ public class HelloApplication extends Application {
         //Creating scene
         FXMLLoader login = new FXMLLoader(getClass().getResource("/com/example/toxic_pizzaui/.fxml/MainPage.fxml"));
         Scene scene = new Scene(login.load());
-        //scene.getStylesheets().add("/com/example/toxic_pizzaui/.style/loginPage.css");
+        scene.getStylesheets().add("/com/example/toxic_pizzaui/.style/Mpage.css");
 
 
         //Adding a window pizza icon

@@ -46,7 +46,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Button fx:id="LOGIN_BUTTON" layoutX="545.0" layoutY="575.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="218.0" text="Join Now">
+      <Button fx:id="LOGIN_BUTTON" layoutX="545.0" layoutY="575.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="218.0" stylesheets="../.style/buttons.css" text="Join Now">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>

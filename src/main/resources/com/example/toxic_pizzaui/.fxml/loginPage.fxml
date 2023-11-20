@@ -30,7 +30,7 @@
          <font>
             <Font name="Motiva Sans Test Regular" size="14.0" />
          </font></PasswordField>
-      <Button fx:id="LOGIN_BUTTON" layoutX="527.0" layoutY="584.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="218.0" text="Login">
+      <Button fx:id="LOGIN_BUTTON" layoutX="527.0" layoutY="584.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="218.0" stylesheets="../.style/buttons.css" text="Login">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>
