@@ -4,12 +4,13 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #6D3381;" stylesheets="../.style/loginPage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.loginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #6D3381;" stylesheets="@../.style/loginPage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.loginController">
    <children>
       <Rectangle fx:id="whiteLabel" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="503.0" layoutX="454.0" layoutY="160.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="382.0" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="454.0" AnchorPane.topAnchor="160.0" />
       <Label layoutX="496.0" layoutY="202.0" text="Welcome!">
@@ -30,11 +31,17 @@
          <font>
             <Font name="Motiva Sans Test Regular" size="14.0" />
          </font></PasswordField>
-      <Button fx:id="LOGIN_BUTTON" layoutX="527.0" layoutY="584.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="218.0" stylesheets="../.style/buttons.css" text="Login">
+      <Button fx:id="LOGIN_BUTTON" layoutX="527.0" layoutY="584.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="218.0" stylesheets="@../.style/buttons.css" text="Login">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>
       </Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="549.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../.style/userIcon.png" />
+         </image>
+      </ImageView>
    </children>
 
 </AnchorPane>

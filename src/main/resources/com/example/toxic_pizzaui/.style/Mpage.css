@@ -1,4 +1,3 @@
-
 #orderPane{
     -fx-background-color: #762f85;
 }
@@ -9,5 +8,13 @@
 }
 .menuButtons:hover{
     -fx-background-color: #F7DA4B;
+    -fx-effect: dropshadow(gaussian, #363534,10,0,0,0);
+}
+
+#appBar{
+    -fx-background-color: #9a3dad;
+    outline: none;
+}
+.menuButtons::selection{
     -fx-effect: dropshadow(gaussian, #363534,10,0,0,0);
 }
