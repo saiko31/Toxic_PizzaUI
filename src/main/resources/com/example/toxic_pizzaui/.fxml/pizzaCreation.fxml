@@ -451,7 +451,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="clearBtn1" layoutX="47.0" layoutY="69.0" mnemonicParsing="false" onAction="#backToMain" styleClass="navigationBtn" text="&lt; Back">
+      <Button fx:id="clearBtn1" layoutX="47.0" layoutY="69.0" mnemonicParsing="false" onAction="#backBtn" styleClass="navigationBtn" text="&lt; Back">
          <font>
             <Font size="15.0" />
          </font>
