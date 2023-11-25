@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -9,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1290.0" stylesheets="@../.style/Mpage.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.MainPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1290.0" stylesheets="@../.style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.MainPageController">
    <children>
-      <Pane fx:id="orderPane" prefHeight="808.0" prefWidth="348.0">
+      <Pane fx:id="orderPane" prefHeight="808.0" prefWidth="348.0" styleClass="purpleBackground" stylesheets="@../.style/style.css">
          <children>
-            <Button fx:id="orderButton" layoutX="70.0" layoutY="500.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="210.0" stylesheets="@../.style/buttons.css" text="Start Your Order">
+            <Button fx:id="orderButton" layoutX="70.0" layoutY="500.0" mnemonicParsing="false" onAction="#startOrder" prefHeight="51.0" prefWidth="210.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Start Your Order">
                <font>
                   <Font name="Motiva Sans Test Bold" size="17.0" />
                </font>
@@ -25,28 +26,40 @@
             </Text>
          </children>
       </Pane>
-      <Button layoutX="457.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnCrust" prefHeight="31.0" prefWidth="213.0" styleClass="menuButtons" text="Crust">
+      <Button layoutX="457.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnCrust" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Crust">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>
+         <styleClass>
+            <String fx:value="menuButtons" />
+            <String fx:value="yellowButtons" />
+         </styleClass>
       </Button>
-      <Button layoutX="718.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnToppings" prefHeight="31.0" prefWidth="213.0" styleClass="menuButtons" text="Toppings">
+      <Button layoutX="718.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnToppings" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Toppings">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>
+         <styleClass>
+            <String fx:value="menuButtons" />
+            <String fx:value="yellowButtons" />
+         </styleClass>
       </Button>
-      <Button layoutX="972.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnBeverages" prefHeight="31.0" prefWidth="213.0" styleClass="menuButtons" text="Beverages">
+      <Button layoutX="972.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnBeverages" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Beverages">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>
+         <styleClass>
+            <String fx:value="menuButtons" />
+            <String fx:value="yellowButtons" />
+         </styleClass>
       </Button>
-      <Pane fx:id="appBar" layoutX="348.0" layoutY="-6.0" prefHeight="58.0" prefWidth="942.0" />
+      <Pane fx:id="appBar" layoutX="348.0" layoutY="-6.0" prefHeight="58.0" prefWidth="942.0" styleClass="appBar" stylesheets="@../.style/style.css" />
       <Text layoutX="457.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
          <font>
             <Font name="System Bold" size="45.0" />
          </font>
       </Text>
-      <AnchorPane fx:id="crustMenu" layoutX="455.0" layoutY="228.0" prefHeight="525.0" prefWidth="729.0" stylesheets="@../.style/menuItems.css">
+      <AnchorPane fx:id="crustMenu" layoutX="455.0" layoutY="228.0" prefHeight="525.0" prefWidth="729.0" stylesheets="@../.style/menuItems.css" visible="false">
          <children>
             <VBox layoutX="66.0" layoutY="135.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
                <children>

@@ -1,5 +1,6 @@
 package com.example.toxic_pizzaui.controller;
 
+import com.example.toxic_pizzaui.objects.Tp_Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,33 +8,45 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class loginController {
     @FXML
-    private Label welcomeText;
+    private Label messageLabel;
+    @FXML
+    private  Pane messagePane;
 
     @FXML
-    private Stage primaryStage;
+    private PasswordField PASS_FIELD;
 
-
-    private Alert loginAlert;
     @FXML
-    protected void login(ActionEvent e) throws IOException {
-       /* loginAlert = new Alert(Alert.AlertType.INFORMATION);
-        loginAlert.setTitle("Test");
-        loginAlert.setContentText("This is a test");
-        loginAlert.getDialogPane().getStylesheets().add("/.style/buttons.css");
-        loginAlert.showAndWait();*/
+    private TextField PHONE_NUM_FIELD;
 
 
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/toxic_pizzaui/.fxml/MainPage.fxml"));
-        primaryStage = new Stage();
-        Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.show();
 
+
+    @FXML
+    private void signUp(ActionEvent e) throws IOException{                      //This will jump to the SignUp page in case the user wants to create a new account
+        Tp_Utils.changeScene(e, "signUp.fxml");                         // Employee accounts will be registered by the manager, who will have a default login credentials, for now just leave it as *phoneNUM = admin and password = admin* for simplicity
     }
+
+    @FXML
+    private void login(ActionEvent event){
+        if(PHONE_NUM_FIELD.getText().isBlank() == false && PASS_FIELD.getText().isBlank() == false){
+            /*All the Database connection and verification for log in should be here
+            * It will just verify a phone number and password. */
+
+            Tp_Utils.changeScene(event, "MainPage.fxml");
+        }
+        else{                                                                           /*This will display a message on the screen asking for*/
+            messagePane.setVisible(true);                                               /*the password and the phone number in case nothing is typed in the log in page */
+            messageLabel.setText("Please enter username and password");
+        }
+    }
+
 }

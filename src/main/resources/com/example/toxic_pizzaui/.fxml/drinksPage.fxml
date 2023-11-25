@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui..fxml.DrinksPage">
+   <children>
+      <Pane layoutX="-2.0" prefHeight="200.0" prefWidth="1289.0" styleClass="appBar" stylesheets="@../.style/style.css" />
+      <Pane layoutX="-2.0" layoutY="74.0" prefHeight="200.0" prefWidth="1289.0" styleClass="itemToCart" stylesheets="@../.style/style.css">
+         <children>
+            <Button layoutX="1065.0" layoutY="140.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="161.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Review Cart">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            <Button layoutX="857.0" layoutY="140.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="161.0" style="-fx-background-radius: 7;" styleClass="navigationBtn" stylesheets="@../.style/style.css" text="Continue Shopping" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+            <Text layoutX="836.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Successfully added to Cart!">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="-1.0" layoutY="723.0" prefHeight="81.0" prefWidth="1289.0" styleClass="pricePane" stylesheets="@../.style/style.css">
+         <children>
+            <Button layoutX="1112.0" layoutY="25.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="146.0" styleClass="yellowButtons" text="Add to Cart">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <HBox layoutX="532.0" layoutY="296.0" prefHeight="58.0" prefWidth="222.0">
+         <children>
+            <Pane prefHeight="58.0" prefWidth="155.0">
+               <children>
+                  <Text layoutX="31.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks." textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="58.0" prefWidth="113.0">
+               <children>
+                  <Text layoutX="1.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thirsty?" textAlignment="CENTER">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <Separator layoutX="348.0" layoutY="368.0" orientation="VERTICAL" prefHeight="313.0" prefWidth="20.0" />
+      <VBox layoutX="75.0" layoutY="402.0" prefHeight="259.0" prefWidth="233.0">
+         <children>
+            <Pane prefHeight="95.0" prefWidth="222.0">
+               <children>
+                  <ToggleButton layoutX="14.0" layoutY="26.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="195.0" styleClass="toppingButtons" stylesheets="@../.style/style.css">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="drinkSIze" />
+                     </toggleGroup>
+                     <graphic>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="7.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Small">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="45.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$1.99">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </Pane>
+            <Pane prefHeight="95.0" prefWidth="222.0">
+               <children>
+                  <ToggleButton layoutX="14.0" layoutY="26.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="195.0" styleClass="toppingButtons" stylesheets="@../.style/style.css" toggleGroup="$drinkSIze">
+                     <graphic>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="7.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medium">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="45.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$2.49">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </Pane>
+            <Pane prefHeight="95.0" prefWidth="222.0">
+               <children>
+                  <ToggleButton layoutX="14.0" layoutY="26.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="195.0" styleClass="toppingButtons" stylesheets="@../.style/style.css" toggleGroup="$drinkSIze">
+                     <graphic>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="7.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Large">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Text layoutX="45.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$2.99">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                     </graphic>
+                  </ToggleButton>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

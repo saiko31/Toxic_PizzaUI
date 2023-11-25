@@ -1,5 +1,6 @@
 package com.example.toxic_pizzaui.controller;
 
+import com.example.toxic_pizzaui.objects.Tp_Utils;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -42,48 +43,55 @@ public class MainPageController {
         menuTimeLine = new Timeline(
                 new KeyFrame(Duration.seconds(0), event -> switchMenu(crustMenu)),
                 new KeyFrame(Duration.seconds(5), event -> switchMenu(toppingsMenu)),
-                new KeyFrame(Duration.seconds(10), event -> {
-                    switchMenu(beveragesMenu);
-                    /*menuTimeLine.playFromStart();*/})
+                new KeyFrame(Duration.seconds(10), event -> switchMenu(beveragesMenu))
                 );
         menuTimeLine.setCycleCount(Timeline.INDEFINITE);
         menuTimeLine.play();
     }
-
+    @FXML
     public void btnCrust(ActionEvent event) throws IOException{
       switchMenu(crustMenu);
       restartTimeLine();
 
     }
-
+    @FXML
     public void btnToppings(ActionEvent event) throws IOException{
         switchMenu(toppingsMenu);
         restartTimeLine();
     }
+
+    @FXML
     public void btnBeverages(ActionEvent event) throws  IOException{
         switchMenu(beveragesMenu);
-        /*restartTimeLine();*/
-        System.out.println("beverages");
+        restartTimeLine();
     }
 
 
-    private void switchMenu(AnchorPane targetMenu){
-        fadeTransition.setNode(targetMenu);
-        fadeTransition.play();
-        fadeTransition.setOnFinished(event -> {
-            crustMenu.setVisible(false);
-            toppingsMenu.setVisible(false);
-            beveragesMenu.setVisible(false);
 
-            targetMenu.setOpacity(1.0);
-            targetMenu.setVisible(true);
-        });
+    @FXML
+    private void startOrder(ActionEvent e) throws IOException{                      /// Press the "Start Order Button", will jump to the order type selection page
+        Tp_Utils.changeScene(e, "deliveryOptionPage.fxml");
+    }
 
+
+
+
+    @FXML
+    private void switchMenu(AnchorPane targetMenu){                                 // This is suppose to be a animation for the menu to disp
+
+
+        beveragesMenu.setVisible(false);
+        toppingsMenu.setVisible(false);
+        beveragesMenu.setVisible(false);
+
+       targetMenu.setVisible(true);
     }
 
     private void restartTimeLine(){
         menuTimeLine.stop();
         menuTimeLine.playFromStart();
     }
+
+
 
 }

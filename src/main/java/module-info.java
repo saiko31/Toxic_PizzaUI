@@ -1,6 +1,7 @@
 module com.example.toxic_pizzaui {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.sql;
 
 
     opens com.example.toxic_pizzaui to javafx.fxml;

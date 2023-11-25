@@ -4,20 +4,21 @@ import javafx.application.Application;
 import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.scene.image.Image;
+import javafx.scene.text.Font;
 import javafx.stage.*;
 
 
 import java.io.IOException;
 
 
-public class HelloApplication extends Application {
+public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         //Creating scene
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/toxic_pizzaui/.fxml/MainPage.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/toxic_pizzaui/.fxml/loginPage.fxml"));
         Parent root = loader.load();
 
-
+        //Font motivaSans = Font.loadFont(getClass().getResourceAsStream("com/example/toxic_pizzaui/.fonts/Motiva Sans Test/MotivaSansTest-Regular.otf"), 12);
 
 
         //Adding a window pizza icon
