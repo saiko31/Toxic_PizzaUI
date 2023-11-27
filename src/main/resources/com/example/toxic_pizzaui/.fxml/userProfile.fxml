@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
@@ -15,30 +16,36 @@
          <children>
             <HBox style="-fx-background-color: purple;">
                <children>
-                  <Button mnemonicParsing="false" text="Home">
+                  <Button mnemonicParsing="false">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../.style/userIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                   <Region HBox.hgrow="ALWAYS" />
-                  <Button mnemonicParsing="false" text="Profile">
+                  <Button fx:id="CartButton" mnemonicParsing="false" onAction="#goToCart">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
-                  </Button>
-                  <Button mnemonicParsing="false" text="Cart">
-                     <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </padding>
-                     <HBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../.style/cart_image.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
                   </Button>
                </children></HBox>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
@@ -90,7 +97,7 @@
                                     <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                                  </children>
                               </HBox>
-                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                              <HBox prefHeight="48.0" prefWidth="738.0" />
                               <HBox VBox.vgrow="ALWAYS">
                                  <children>
                                     <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
@@ -113,7 +120,7 @@
          <children>
             <HBox>
                <children>
-                  <Hyperlink text="&lt; Back" textFill="#7c386b">
+                  <Hyperlink fx:id="goBackClick" onAction="#goBack" text="&lt; Back" textFill="#7c386b">
                      <font>
                         <Font size="16.0" />
                      </font>
