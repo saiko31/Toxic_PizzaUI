@@ -71,6 +71,11 @@ public class MainPageController {
 
     }
 
+    @FXML
+    private void seeProfile(ActionEvent e){
+        Tp_Utils.changeScene(e, "userProfile.fxml");
+    }
+
 
 
 

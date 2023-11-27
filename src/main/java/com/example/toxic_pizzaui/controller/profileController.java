@@ -6,22 +6,9 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
-public class profileController extends Application {
+public class profileController {
     Button userButton;
-    public static void main(String[] args){
-        launch(args);
-    }
 
-    @Override
-    public void start(Stage stage) throws Exception {
-        stage.setTitle("User Profile");
-        userButton = new Button();
-        userButton.setText("Profile");
-        StackPane userLayout = new StackPane();
-        userLayout.getChildren().add(userButton);
+    /*All the code related to the user profile page goes here: action buttons, order history, update information, etc.*/
 
-        Scene userScene = new Scene(userLayout, 1280, 800);
-        stage.setScene(userScene);
-        stage.show();
-    }
 }
