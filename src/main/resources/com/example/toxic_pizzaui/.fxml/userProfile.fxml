@@ -42,7 +42,7 @@
                      <graphic>
                         <ImageView fitHeight="53.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../.style/cart_image.jpg" />
+                              <Image url="@../.style/cart-image.png" />
                            </image>
                         </ImageView>
                      </graphic>
