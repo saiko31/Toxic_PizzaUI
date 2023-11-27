@@ -1,0 +1,8 @@
+.priceTag{
+    -fx-text-fill: #7030ac;
+}
+
+.itemImage{
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}

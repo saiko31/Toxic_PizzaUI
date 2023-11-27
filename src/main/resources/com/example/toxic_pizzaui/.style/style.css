@@ -1,0 +1,116 @@
+.warningPrompt{
+    -fx-text-fill: #C00000;
+}
+.purpleBackground{
+    -fx-background-color: #6d3381;
+}
+
+.loginRectangle{
+    -fx-background-color:#fff;
+    -fx-background-radius: 20;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.6) , 15, 0 , 0 , 0 );
+}
+
+.borderPane{
+    -fx-border-color: #fff;
+}
+
+.yellowButtons{
+    -fx-background-color: #fdc538;
+    -fx-border-radius: 5;
+    -fx-text-fill: #595959;
+}
+.yellowButtons:hover{
+    -fx-background-color:  #F7DA4B;
+}
+.appBar{
+    -fx-background-color: #9a3dad;
+    -fx-pref-height : 58px;
+}
+
+.pizzaSizeButton{
+    -fx-background-color: #fdc538;
+    -fx-border-color: #d29908;
+    -fx-text-fill: #d29908;
+    -fx-shape: "M30 60 A30 30 0 1 0 30 0 A30 30 0 1 0 30 60";
+}
+
+.pizzaSizeButton:selected{
+    -fx-background-color: #d29908;
+    -fx-text-fill: #ffff;
+}
+
+.crustButton{
+    -fx-background-color: #fff;
+    -fx-background-radius: 7;
+    -fx-border-radius: 7;
+    -fx-border-color: #D0CECE;
+}
+
+.crustButton:selected{
+    -fx-border-color: #FDC538;
+    -fx-border-width: 2.5px;
+}
+
+.toppingButtons{
+    -fx-background-color: #fff;
+    -fx-background-radius: 7;
+    -fx-border-radius: 7;
+    -fx-border-color: #D0CECE;
+}
+
+.toppingButtons:selected{
+    -fx-border-color: #FDC538;
+    -fx-border-width: 2.5px;
+}
+
+.navigationBtn{
+    -fx-background-color: #f4f4f4;
+    -fx-border-color:#f4f4f4;
+    -fx-text-fill: #767171;
+    -fx-border-radius: 7;
+    -fx-underline: true;
+}
+.navigationBtn:hover{
+    -fx-border-color:#767171;
+}
+
+.purpleText{
+    -fx-fill: #7030A0;
+}
+
+.menuButtons:hover{
+    -fx-background-color:  #F7DA4B;
+    -fx-effect: dropshadow(gaussian, #767171, 10,0,0,0 )
+}
+.itemToCart{
+    -fx-background-color: #d9d9d9;
+}
+
+.pricePane{
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.6) , 15, 0 , 0 , 0 );
+    -fx-background-color:#fff;
+
+}
+
+.textfield{
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-border-color: #FDC538;
+}
+
+.textfield:focused{
+    -fx-border-color: #6d3381;
+}
+
+.messagePane{
+    -fx-background-color: #ffdce0;
+    -fx-background-radius: 10;
+}
+
+.whitePane{
+    -fx-background-color:#fff;
+    -fx-background-radius: 7;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.6) , 15, 0 , 0 , 0 );
+}
+
