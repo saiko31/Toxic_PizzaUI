@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -10,8 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.cartController">
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.cartController">
    <children>
       <Pane prefHeight="58.0" prefWidth="1280.0" styleClass="appBar" stylesheets="@../.style/style.css" />
       <Label layoutX="540.0" layoutY="69.0" text="Your Cart">
@@ -77,5 +80,10 @@
             </HBox>
          </children>
       </VBox>
+      <Hyperlink fx:id="goBack" layoutX="30.0" layoutY="735.0" onAction="#goBack" prefHeight="45.0" prefWidth="60.0" text="&lt; Back" textFill="#993ca1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
    </children>
 </AnchorPane>

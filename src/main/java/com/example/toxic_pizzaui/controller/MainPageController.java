@@ -65,18 +65,15 @@ public class MainPageController {
         Tp_Utils.changeScene(e, "deliveryOptionPage.fxml");
     }
 
-
-    @FXML
-    private void cartBtn(ActionEvent e) throws IOException{
-
-    }
-
     @FXML
     private void seeProfile(ActionEvent e){
         Tp_Utils.changeScene(e, "userProfile.fxml");
     }
 
-
+    @FXML
+    public void goToCart(ActionEvent event) throws IOException{
+        Tp_Utils.changeScene(event, "cart.fxml");
+    }
 
 
     @FXML
