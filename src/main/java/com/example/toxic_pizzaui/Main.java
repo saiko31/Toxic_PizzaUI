@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.scene.image.Image;
-import javafx.scene.text.Font;
 import javafx.stage.*;
 
 
@@ -18,7 +17,6 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/toxic_pizzaui/.fxml/loginPage.fxml"));
         Parent root = loader.load();
 
-        //Font motivaSans = Font.loadFont(getClass().getResourceAsStream("com/example/toxic_pizzaui/.fonts/Motiva Sans Test/MotivaSansTest-Regular.otf"), 12);
 
 
         //Adding a window pizza icon

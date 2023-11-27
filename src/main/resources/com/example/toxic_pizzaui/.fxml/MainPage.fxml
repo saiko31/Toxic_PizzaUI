@@ -53,7 +53,10 @@
             <String fx:value="yellowButtons" />
          </styleClass>
       </Button>
-      <Pane fx:id="appBar" layoutX="348.0" layoutY="-6.0" prefHeight="58.0" prefWidth="942.0" styleClass="appBar" stylesheets="@../.style/style.css" />
+      <Pane fx:id="appBar" layoutX="348.0" layoutY="-6.0" prefHeight="58.0" prefWidth="942.0" styleClass="appBar" stylesheets="@../.style/style.css">
+         <children>
+            <Button fx:id="cartBtn" layoutX="870.0" layoutY="17.0" mnemonicParsing="false" onAction="#cartBtn" text="Cart" />
+         </children></Pane>
       <Text layoutX="457.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
          <font>
             <Font name="System Bold" size="45.0" />

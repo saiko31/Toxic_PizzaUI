@@ -1,22 +1,12 @@
 package com.example.toxic_pizzaui.controller;
 
-import com.example.toxic_pizzaui.objects.Tp_Utils;
+import com.example.toxic_pizzaui.Tp_Utils;
 import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.SubScene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -33,6 +23,7 @@ public class MainPageController {
 
     private final FadeTransition fadeTransition;
     private Timeline menuTimeLine;
+
 
 
     public MainPageController(){
@@ -70,7 +61,14 @@ public class MainPageController {
 
     @FXML
     private void startOrder(ActionEvent e) throws IOException{                      /// Press the "Start Order Button", will jump to the order type selection page
+
         Tp_Utils.changeScene(e, "deliveryOptionPage.fxml");
+    }
+
+
+    @FXML
+    private void cartBtn(ActionEvent e) throws IOException{
+
     }
 
 

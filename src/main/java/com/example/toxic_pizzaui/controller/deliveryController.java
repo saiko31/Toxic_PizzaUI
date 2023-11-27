@@ -1,6 +1,6 @@
 package com.example.toxic_pizzaui.controller;
 
-import com.example.toxic_pizzaui.objects.Tp_Utils;
+import com.example.toxic_pizzaui.Tp_Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;

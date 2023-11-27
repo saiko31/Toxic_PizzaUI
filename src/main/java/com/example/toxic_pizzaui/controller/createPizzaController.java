@@ -1,31 +1,27 @@
 package com.example.toxic_pizzaui.controller;
 
 
-import com.example.toxic_pizzaui.objects.Tp_Utils;
+import com.example.toxic_pizzaui.objects.Crust;
+import com.example.toxic_pizzaui.objects.Pizza;
+import com.example.toxic_pizzaui.objects.Topping;
+import com.example.toxic_pizzaui.Tp_Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.text.Text;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 
-public class createPizzaController {
-    @FXML
-    private ToggleButton fPizza;
+public class createPizzaController implements Initializable {
 
-    @FXML
-    private ToggleButton mPizza;
 
     @FXML
-    private ToggleButton LPIzza;
-
-    @FXML
-    private Text price;
-
-    @FXML
-    private ToggleButton smallPizza;
+    private Label priceLabel;
 
     @FXML
     private ToggleGroup toppingsBtn;
@@ -36,15 +32,77 @@ public class createPizzaController {
     @FXML
     private ToggleGroup crustBtn;
 
-    private static final int toppingLimit = 4;  //Sets the limit of toppings options to only 4
+    @FXML
+    private Label toppingsCounter;
 
-    private void pizzaSizeSelection(ActionEvent e) throws IOException {
-        fPizza.setOnAction(event -> {price.setText("Price");});
+    private Pizza newPizza;
+
+
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        newPizza = new Pizza();
     }
 
 
-    private void toppingsLimit(){
+
+    @FXML
+    private void backBtn(ActionEvent e) throws IOException{
+        Tp_Utils.changeScene(e, "deliveryOptionPage.fxml");
+    }
+
+    @FXML
+    private void selectPizzaSize(ActionEvent e){
+        ToggleButton selected = (ToggleButton) pizzaSizes.getSelectedToggle();
+
+        if(selected != null){
+            newPizza.setPizzaSize(selected.getAccessibleText().toLowerCase());
+            setLabelPrice();
+        }
+    }
+
+    @FXML
+    private void selectPizzaCrust(ActionEvent e){
+        ToggleButton selected = (ToggleButton) crustBtn.getSelectedToggle();
+
+        if(selected != null){
+            newPizza.setCrustOption(new Crust(selected.getAccessibleText().toLowerCase()));
+            setLabelPrice();
+        }
+
+    }
+    @FXML
+    private void selectToppings(ActionEvent e){
+
+        if(newPizza.getToppings() <=3){
+            ToggleButton selected = (ToggleButton) toppingsBtn.getSelectedToggle();
+            if(selected != null){
+                newPizza.addTopping(new Topping(selected.getAccessibleText().toLowerCase()));
+            }
+            toppingsCounter.setText(newPizza.getToppings() + " out of 4");
+            setLabelPrice();
+        }
 
     }
 
+    @FXML
+
+    private void clear(){                               //Clears all selections made by user
+        Tp_Utils.deselectAllToggles(pizzaSizes);
+        Tp_Utils.deselectAllToggles(crustBtn);
+        Tp_Utils.deselectAllToggles(toppingsBtn);
+
+        newPizza.clear();
+        toppingsCounter.setText(newPizza.getToppings() + " out of 4");
+        setLabelPrice();
+    }
+
+
+
+
+
+
+    public void setLabelPrice(){                        //Updates the price tag
+        priceLabel.setText("$" + newPizza.getPrice());
+    }
 }

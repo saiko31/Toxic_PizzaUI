@@ -2,6 +2,7 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.ToggleButton?>
@@ -31,7 +32,7 @@
                <children>
                   <Pane prefHeight="88.0" prefWidth="100.0">
                      <children>
-                        <ToggleButton fx:id="smallPizza" layoutX="29.0" layoutY="31.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="42.0" styleClass="pizzaSizeButton" text="10''">
+                        <ToggleButton fx:id="smallPizza" accessibleText="small" layoutX="29.0" layoutY="31.0" mnemonicParsing="false" onAction="#selectPizzaSize" prefHeight="43.0" prefWidth="42.0" styleClass="pizzaSizeButton" text="10''">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -57,7 +58,7 @@
                <children>
                   <Pane prefHeight="88.0" prefWidth="100.0">
                      <children>
-                        <ToggleButton fx:id="mPizza" layoutX="19.0" layoutY="13.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="62.0" styleClass="pizzaSizeButton" text="12''" toggleGroup="$pizzaSizes">
+                        <ToggleButton fx:id="mPizza" accessibleText="medium" layoutX="19.0" layoutY="13.0" mnemonicParsing="false" onAction="#selectPizzaSize" prefHeight="63.0" prefWidth="62.0" styleClass="pizzaSizeButton" text="12''" toggleGroup="$pizzaSizes">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -80,7 +81,7 @@
                <children>
                   <Pane prefHeight="88.0" prefWidth="100.0">
                      <children>
-                        <ToggleButton fx:id="LPIzza" layoutX="12.0" layoutY="7.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="76.0" styleClass="pizzaSizeButton" text="14''" toggleGroup="$pizzaSizes">
+                        <ToggleButton fx:id="LPIzza" accessibleText="large" layoutX="12.0" layoutY="7.0" mnemonicParsing="false" onAction="#selectPizzaSize" prefHeight="75.0" prefWidth="76.0" styleClass="pizzaSizeButton" text="14''" toggleGroup="$pizzaSizes">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -103,7 +104,7 @@
                <children>
                   <Pane prefHeight="88.0" prefWidth="100.0">
                      <children>
-                        <ToggleButton fx:id="fPizza" layoutX="8.0" layoutY="-6.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="89.0" styleClass="pizzaSizeButton" text="16''" toggleGroup="$pizzaSizes">
+                        <ToggleButton fx:id="fPizza" accessibleText="family" layoutX="8.0" layoutY="-6.0" mnemonicParsing="false" onAction="#selectPizzaSize" prefHeight="88.0" prefWidth="89.0" styleClass="pizzaSizeButton" text="16''" toggleGroup="$pizzaSizes">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -133,7 +134,7 @@
          <children>
             <Pane prefHeight="78.0" prefWidth="198.0">
                <children>
-                  <ToggleButton layoutX="9.0" layoutY="24.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="176.0" styleClass="crustButton" text="thin">
+                  <ToggleButton accessibleText="thin" layoutX="9.0" layoutY="24.0" mnemonicParsing="false" onAction="#selectPizzaCrust" prefHeight="52.0" prefWidth="176.0" styleClass="crustButton">
                      <graphic>
                         <Pane prefHeight="44.0" prefWidth="117.0">
                            <children>
@@ -163,21 +164,21 @@
             </Pane>
             <Pane prefHeight="78.0" prefWidth="198.0">
                <children>
-                  <ToggleButton layoutX="9.0" layoutY="24.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="176.0" styleClass="crustButton" text="crust" toggleGroup="$crustBtn">
+                  <ToggleButton accessibleText="stuffed" layoutX="9.0" layoutY="24.0" mnemonicParsing="false" onAction="#selectPizzaCrust" prefHeight="52.0" prefWidth="176.0" styleClass="crustButton" toggleGroup="$crustBtn">
                      <graphic>
                         <Pane prefHeight="44.0" prefWidth="117.0">
                            <children>
                               <ImageView fitHeight="39.0" fitWidth="37.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../.style/Thin-Crust-PIzza-2.jpg" />
+                                    <Image url="@../.style/Stuffed_Crust.jpg" />
                                  </image>
                               </ImageView>
-                              <Text layoutX="54.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thin Crust" wrappingWidth="100.0">
+                              <Text layoutX="54.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stuffed Crust" wrappingWidth="100.0">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="54.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-underline: true;" text=" Add $0.99">
+                              <Text layoutX="54.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-underline: true;" text=" Add $1.49">
                                  <font>
                                     <Font name="System Italic" size="12.0" />
                                  </font>
@@ -190,21 +191,21 @@
             </Pane>
             <Pane prefHeight="78.0" prefWidth="198.0">
                <children>
-                  <ToggleButton layoutX="9.0" layoutY="24.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="176.0" styleClass="crustButton" text="dish" toggleGroup="$crustBtn">
+                  <ToggleButton accessibleText="deep" layoutX="9.0" layoutY="24.0" mnemonicParsing="false" onAction="#selectPizzaCrust" prefHeight="52.0" prefWidth="176.0" styleClass="crustButton" toggleGroup="$crustBtn">
                      <graphic>
                         <Pane prefHeight="44.0" prefWidth="117.0">
                            <children>
                               <ImageView fitHeight="39.0" fitWidth="37.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../.style/Thin-Crust-PIzza-2.jpg" />
+                                    <Image url="@../.style/deep_dish.jpg" />
                                  </image>
                               </ImageView>
-                              <Text layoutX="54.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thin Crust" wrappingWidth="100.0">
+                              <Text layoutX="54.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deep Dish" wrappingWidth="100.0">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Text>
-                              <Text layoutX="54.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-underline: true;" text=" Add $0.99">
+                              <Text layoutX="54.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-underline: true;" text=" Add $1.99">
                                  <font>
                                     <Font name="System Italic" size="12.0" />
                                  </font>
@@ -283,7 +284,7 @@
          <children>
             <Pane prefHeight="63.0" prefWidth="176.0">
                <children>
-                  <ToggleButton layoutY="17.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons">
+                  <ToggleButton accessibleText="cheese" layoutY="17.0" mnemonicParsing="false" onAction="#selectToppings" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons">
                      <graphic>
                         <Pane prefHeight="24.0" prefWidth="168.0">
                            <children>
@@ -304,7 +305,7 @@
             </Pane>
             <Pane prefHeight="63.0" prefWidth="176.0">
                <children>
-                  <ToggleButton layoutY="17.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
+                  <ToggleButton accessibleText="pepperoni" layoutY="17.0" mnemonicParsing="false" onAction="#selectToppings" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
                      <graphic>
                         <Pane prefHeight="24.0" prefWidth="168.0">
                            <children>
@@ -322,7 +323,7 @@
             </Pane>
             <Pane prefHeight="63.0" prefWidth="176.0">
                <children>
-                  <ToggleButton layoutY="17.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
+                  <ToggleButton accessibleText="veggie" layoutY="17.0" mnemonicParsing="false" onAction="#selectToppings" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
                      <graphic>
                         <Pane prefHeight="24.0" prefWidth="168.0">
                            <children>
@@ -340,7 +341,7 @@
             </Pane>
             <Pane prefHeight="63.0" prefWidth="176.0">
                <children>
-                  <ToggleButton layoutY="17.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
+                  <ToggleButton accessibleText="meat" layoutY="17.0" mnemonicParsing="false" onAction="#selectToppings" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
                      <graphic>
                         <Pane prefHeight="24.0" prefWidth="168.0">
                            <children>
@@ -362,7 +363,7 @@
          <children>
             <Pane prefHeight="63.0" prefWidth="176.0">
                <children>
-                  <ToggleButton layoutY="16.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
+                  <ToggleButton accessibleText="threeCheese" layoutY="16.0" mnemonicParsing="false" onAction="#selectToppings" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
                      <graphic>
                         <Pane prefHeight="24.0" prefWidth="168.0">
                            <children>
@@ -380,7 +381,7 @@
             </Pane>
             <Pane prefHeight="63.0" prefWidth="176.0">
                <children>
-                  <ToggleButton layoutY="16.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
+                  <ToggleButton accessibleText="bbq" layoutY="16.0" mnemonicParsing="false" onAction="#selectToppings" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
                      <graphic>
                         <Pane prefHeight="24.0" prefWidth="168.0">
                            <children>
@@ -398,7 +399,7 @@
             </Pane>
             <Pane prefHeight="63.0" prefWidth="176.0">
                <children>
-                  <ToggleButton layoutY="16.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
+                  <ToggleButton accessibleText="ham" layoutY="16.0" mnemonicParsing="false" onAction="#selectToppings" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
                      <graphic>
                         <Pane prefHeight="24.0" prefWidth="168.0">
                            <children>
@@ -416,7 +417,7 @@
             </Pane>
             <Pane prefHeight="63.0" prefWidth="176.0">
                <children>
-                  <ToggleButton layoutY="16.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
+                  <ToggleButton accessibleText="mushrooms" layoutY="16.0" mnemonicParsing="false" onAction="#selectToppings" prefHeight="32.0" prefWidth="176.0" styleClass="toppingButtons" toggleGroup="$toppingsBtn">
                      <graphic>
                         <Pane prefHeight="24.0" prefWidth="168.0">
                            <children>
@@ -446,20 +447,25 @@
           <MenuItem mnemonicParsing="false" text="Action 2" />
         </items>
       </SplitMenuButton>
-      <Button fx:id="clearBtn" layoutX="53.0" layoutY="735.0" mnemonicParsing="false" styleClass="navigationBtn" text="Clear">
+      <Button fx:id="clearBtn" layoutX="53.0" layoutY="735.0" mnemonicParsing="false" onAction="#clear" styleClass="navigationBtn" text="Clear">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Button fx:id="clearBtn1" layoutX="47.0" layoutY="69.0" mnemonicParsing="false" onAction="#backToMain" styleClass="navigationBtn" text="&lt; Back">
+      <Button fx:id="clearBtn1" layoutX="47.0" layoutY="69.0" mnemonicParsing="false" onAction="#backBtn" styleClass="navigationBtn" text="&lt; Back">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
-      <Text fx:id="price" layoutX="868.0" layoutY="772.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$0.00">
+      <Label fx:id="priceLabel" layoutX="872.0" layoutY="736.0" text="\$0.00">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
-      </Text>
+      </Label>
+      <Label fx:id="toppingsCounter" layoutX="901.0" layoutY="650.0" text="0 out of 4">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
