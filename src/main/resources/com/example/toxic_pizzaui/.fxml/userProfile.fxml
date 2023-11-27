@@ -61,12 +61,12 @@
       </VBox>
    </top>
    <center>
-      <VBox alignment="CENTER" opacity="0.77" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" opacity="0.77" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                <children>
                   <Region HBox.hgrow="ALWAYS" />
-                  <Pane opacity="0.54" prefHeight="488.0" prefWidth="674.0" style="-fx-background-color: grey;">
+                  <Pane prefHeight="599.0" prefWidth="729.0" style="-fx-background-color: white;">
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </HBox.margin>
@@ -76,34 +76,77 @@
                      <children>
                         <VBox>
                            <children>
-                              <HBox prefHeight="100.0" prefWidth="200.0">
+                              <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white;">
                                  <children>
                                     <Region prefHeight="200.0" prefWidth="200.0" />
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order History" wrappingWidth="363.6639709472656">
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order History" translateY="15.0" wrappingWidth="363.6639709472656">
                                        <font>
                                           <Font name="Shrikhand Regular" size="46.0" />
                                        </font>
                                     </Text>
                                  </children>
                               </HBox>
-                              <HBox VBox.vgrow="ALWAYS">
+                              <HBox style="-fx-background-color: purple;" VBox.vgrow="ALWAYS">
                                  <children>
                                     <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                                    <ScrollPane prefHeight="200.0" prefWidth="336.0">
-                                       <content>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" opacity="0.82" prefHeight="200.0" prefWidth="322.0" style="-fx-background-color: black;" />
-                                       </content>
-                                    </ScrollPane>
+                                    <TableView prefHeight="200.0" prefWidth="323.0">
+                                      <columns>
+                                        <TableColumn prefWidth="75.0" text="ORDER NO." />
+                                        <TableColumn prefWidth="75.0" text="DATE" />
+                                          <TableColumn prefWidth="75.0" text="AMOUNT" />
+                                          <TableColumn prefWidth="75.0" text="RECEIPTS" />
+                                      </columns>
+                                    </TableView>
                                     <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                                  </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
                               </HBox>
                               <HBox prefHeight="48.0" prefWidth="738.0" />
-                              <HBox VBox.vgrow="ALWAYS">
+                              <HBox style="-fx-background-color: purple;" VBox.vgrow="ALWAYS">
                                  <children>
                                     <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-                                    <Pane opacity="0.62" prefHeight="153.0" prefWidth="338.0" style="-fx-background-color: black;" />
+                                    <TabPane prefHeight="200.0" prefWidth="336.0" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab text="Full Name">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                                          </content>
+                                        </Tab>
+                                        <Tab text="Address">
+                                          <content>
+                                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                                          </content>
+                                        </Tab>
+                                          <Tab text="Phone NO.">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                                            </content>
+                                          </Tab>
+                                          <Tab text="Payment">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                                            </content>
+                                          </Tab>
+                                          <Tab text="Password">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                                            </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
                                     <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                                  </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
                               </HBox>
                            </children>
                         </VBox>
