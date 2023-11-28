@@ -54,13 +54,13 @@
             <String fx:value="yellowButtons" />
          </styleClass>
       </Button>
-      <Pane fx:id="appBar" layoutX="348.0" layoutY="-6.0" prefHeight="77.0" prefWidth="942.0" styleClass="appBar" stylesheets="@../.style/style.css">
+      <Pane fx:id="appBar" layoutX="348.0" layoutY="-6.0" prefHeight="58.0" prefWidth="942.0" styleClass="appBar" stylesheets="@../.style/style.css">
          <children>
-            <Button fx:id="cartBtn" layoutX="876.0" layoutY="6.0" minWidth="53.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="51.0" prefWidth="53.0" styleClass="profileButton" stylesheets="@../.style/menuItems.css">
+            <Button fx:id="cartBtn" layoutX="864.0" layoutY="6.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="51.0" prefWidth="64.0" styleClass="profileButton" stylesheets="@../.style/style.css">
                <graphic>
-                  <Pane prefHeight="38.0" prefWidth="44.0">
+                  <Pane prefHeight="51.0" prefWidth="64.0">
                      <children>
-                        <ImageView fitHeight="33.0" fitWidth="48.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="39.0" fitWidth="42.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../.style/cart-image.png" />
                            </image>
@@ -72,12 +72,12 @@
                <graphic>
                   <Pane prefHeight="116.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="53.0" layoutY="22.0" text="[USER_NAME]" textFill="WHITE">
+                        <Label layoutX="50.0" layoutY="24.0" text="[USER_NAME]" textFill="#f5f5f5">
                            <font>
                               <Font size="10.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="28.0" fitWidth="38.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../.style/userIcon_yellow.png" />
                            </image>
