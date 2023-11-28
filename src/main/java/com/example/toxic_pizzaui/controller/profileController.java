@@ -17,12 +17,8 @@ public class profileController {
     /*All the code related to the user profile page goes here: action buttons, order history, update information, etc.*/
 
     @FXML
-    public void goBack(ActionEvent event) throws IOException {
+    public void backBtn(ActionEvent event) throws IOException {
         Tp_Utils.changeScene(event, "MainPage.fxml");
     }
 
-    @FXML
-    public void goToCart(ActionEvent event) throws IOException{
-        Tp_Utils.changeScene(event, "cart.fxml");
-    }
 }

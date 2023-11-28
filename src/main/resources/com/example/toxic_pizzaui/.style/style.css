@@ -1,13 +1,20 @@
-.root{
-    -fx-font-family: "Motiva Sans"
-    
+
+/* That little rectangle at the top of the page */
+.appBar{
+    -fx-background-color: #9a3dad;
+    -fx-pref-height : 58px;
 }
+/* ============================================ */
 
 .warningPrompt{
     -fx-text-fill: #C00000;
 }
 .purpleBackground{
     -fx-background-color: #6d3381;
+}
+
+.roundedCorners{
+    -fx-background-radius: 20;
 }
 
 .loginRectangle{
@@ -20,19 +27,21 @@
     -fx-border-color: #fff;
 }
 
+
+
+/* Yellow buttons for all the other buttons */
 .yellowButtons{
-    -fx-background-color: #fdc538;
+    -fx-background-color: #fcc63b;
     -fx-border-radius: 5;
     -fx-text-fill: #595959;
 }
 .yellowButtons:hover{
     -fx-background-color:  #F7DA4B;
 }
-.appBar{
-    -fx-background-color: #9a3dad;
-    -fx-pref-height : 58px;
-}
 
+/* ==================================================== */
+
+/* PIZZA SIZE BUTTONS - pizzaCreation */
 .pizzaSizeButton{
     -fx-background-color: #fdc538;
     -fx-border-color: #d29908;
@@ -44,6 +53,10 @@
     -fx-background-color: #d29908;
     -fx-text-fill: #ffff;
 }
+
+/* ----------------------------------------------------- */
+
+/* CRUST BUTTONS - pizzaCreation */
 
 .crustButton{
     -fx-background-color: #fff;
@@ -57,6 +70,10 @@
     -fx-border-width: 2.5px;
 }
 
+/* ======================================================== */
+
+/* ToppingButtons - pizzaCreation */
+
 .toppingButtons{
     -fx-background-color: #fff;
     -fx-background-radius: 7;
@@ -69,6 +86,9 @@
     -fx-border-width: 2.5px;
 }
 
+/* ========================================================= */
+
+/* Mostly for BACK BUTTONS */
 .navigationBtn{
     -fx-background-color: #f4f4f4;
     -fx-border-color:#f4f4f4;
@@ -80,17 +100,12 @@
     -fx-border-color:#767171;
 }
 
+/* ============================================================= */
+
 .purpleText{
     -fx-fill: #7030A0;
 }
 
-.menuButtons:hover{
-    -fx-background-color:  #F7DA4B;
-    -fx-effect: dropshadow(gaussian, #767171, 10,0,0,0 )
-}
-.itemToCart{
-    -fx-background-color: #d9d9d9;
-}
 
 .pricePane{
     -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.6) , 15, 0 , 0 , 0 );
@@ -104,7 +119,7 @@
     -fx-border-color: #FDC538;
 }
 
-.textfield:focused{
+.textfield:focus{
     -fx-border-color: #6d3381;
 }
 
@@ -120,10 +135,57 @@
 }
 
 
+
+/* It says profile but it is also for the cart button at the top */
 .profileButton{
     -fx-background-color: transparent;
 }
+
 .profileButton:hover{
     -fx-background-color: #5b2466;
+}
+
+/* ============================================================== */
+
+
+/* The following settings are related to the tabPane on the profile page. */
+
+.tab-header-area .tab-header-background{
+    -fx-background-color: #9a3dad;
+}
+
+.tab-pane .tab{
+    -fx-background-color: #9a3dad;
+    -fx-border-color: none;
+    -fx-text-fill:#ffff;
+    -fx-pref-width: 100px;
+    -fx-text-alignemnt: CENTER;
+}
+
+.tab-pane .tab:hover{
+    -fx-background-color: #5b2466;;
+    -fx-text-fill: #ffff;
+}
+
+.tab-pane .tab:selected{
+    -fx-background-color: #5b2466;;
+    -fx-text-fill: #ffff;
+}
+
+.tab .tab-label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+
+.tab-pane:top *.tab-header-area{
+    -fx-padding: 0 0 0 30;
+}
+
+/* ===================================================== */
+
+.menuButtons:hover{
+    -fx-background-color:  #F7DA4B;
+    -fx-effect: dropshadow(gaussian, #767171, 10,0,0,0 )
 }
 

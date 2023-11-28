@@ -6,12 +6,21 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MainPageController {
+public class MainPageController{
     @FXML
     private AnchorPane beveragesMenu;
 
@@ -23,6 +32,8 @@ public class MainPageController {
 
     private final FadeTransition fadeTransition;
     private Timeline menuTimeLine;
+
+
 
 
 
@@ -91,7 +102,5 @@ public class MainPageController {
         menuTimeLine.stop();
         menuTimeLine.playFromStart();
     }
-
-
 
 }
