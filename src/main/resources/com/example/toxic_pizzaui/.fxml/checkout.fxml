@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="58.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checkout">
+         <font>
+            <Font name="System Bold" size="61.0" />
+         </font>
+      </Text>
+      <Pane layoutX="986.0" layoutY="25.0" prefHeight="742.0" prefWidth="469.0" style="-fx-background-color: #D9D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>
