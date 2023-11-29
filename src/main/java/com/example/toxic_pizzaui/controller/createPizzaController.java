@@ -48,7 +48,7 @@ public class createPizzaController implements Initializable {
 
     @FXML
     private void backBtn(ActionEvent e) throws IOException{
-        Tp_Utils.changeScene(e, "deliveryOptionPage.fxml");
+        AppBarController.getInstance().changeScreen("deliveryOptionPage.fxml");
     }
 
     @FXML

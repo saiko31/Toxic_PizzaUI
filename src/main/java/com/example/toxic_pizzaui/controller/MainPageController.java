@@ -36,7 +36,7 @@ public class MainPageController{
     @FXML
     private void startOrder(ActionEvent e) throws IOException{                      /// Press the "Start Order Button", will jump to the order type selection page
         AppBarController.getInstance().changeScreen("deliveryOptionPage.fxml");
-        AppBarController.getInstance().disableProfileBtn();
+        AppBarController.getInstance().setProfileBtn(true);
     }
 
     @FXML

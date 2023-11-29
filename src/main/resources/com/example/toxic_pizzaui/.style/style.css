@@ -113,6 +113,17 @@
 
 }
 
+.transparent{
+    -fx-background-color: transparent;
+}
+.transparent:hover{
+    -fx-background-color: #D0CECE;
+}
+
+.roundBtns{
+    -fx-shape: "M30 60 A30 30 0 1 0 30 0 A30 30 0 1 0 30 60";
+}
+
 .textfield{
     -fx-border-radius: 5;
     -fx-background-radius: 5;

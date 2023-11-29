@@ -40,7 +40,7 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Button layoutX="1204.0" layoutY="-3.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="60.0" prefWidth="50.0" styleClass="profileButton" stylesheets="@../.style/style.css" text="BACK" textFill="WHITE">
+      <Button layoutX="1175.0" layoutY="-3.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="60.0" prefWidth="79.0" styleClass="profileButton" stylesheets="@../.style/style.css" text="BACK" textFill="WHITE">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>

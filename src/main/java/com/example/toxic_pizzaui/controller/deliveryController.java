@@ -54,7 +54,8 @@ public class deliveryController {
 
     @FXML
     private void backBtn(ActionEvent e) throws IOException{
-        Tp_Utils.changeScene(e,"MainPage.fxml");
+        AppBarController.getInstance().changeScreen("MainPage.fxml");
+        AppBarController.getInstance().setProfileBtn(false);
     }
 
     @FXML

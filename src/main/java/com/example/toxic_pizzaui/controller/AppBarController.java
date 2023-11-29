@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 package com.example.toxic_pizzaui.controller;
 
 
@@ -67,8 +75,8 @@ public class AppBarController implements Initializable {
         }
     }
 
-    public void disableProfileBtn(){
-        profileBtn.setDisable(true);
+    public void setProfileBtn(Boolean active){
+        profileBtn.setDisable(active);             // false = activate ; true = deactivate
     }
 
 

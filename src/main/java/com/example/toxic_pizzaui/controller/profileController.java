@@ -18,7 +18,7 @@ public class profileController {
 
     @FXML
     public void backBtn(ActionEvent event) throws IOException {
-        AppBarController.getInstance().changeScreen("MainPage.fxml");
+        Tp_Utils.changeScene(event, "root.fxml");
     }
 
 }
