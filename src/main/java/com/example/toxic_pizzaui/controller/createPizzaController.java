@@ -99,10 +99,12 @@ public class createPizzaController implements Initializable {
 
 
 
-
-
-
     public void setLabelPrice(){                        //Updates the price tag
         priceLabel.setText("$" + newPizza.getPrice());
+    }
+
+    @FXML
+    public void addPizzaToCart(){
+
     }
 }

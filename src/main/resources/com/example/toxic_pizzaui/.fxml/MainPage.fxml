@@ -2,12 +2,8 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -27,7 +23,7 @@
             </Text>
          </children>
       </Pane>
-      <Button layoutX="457.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnCrust" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Crust">
+      <Button layoutX="465.0" layoutY="97.0" mnemonicParsing="false" onAction="#btnCrust" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Crust">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>
@@ -36,7 +32,7 @@
             <String fx:value="yellowButtons" />
          </styleClass>
       </Button>
-      <Button layoutX="718.0" layoutY="154.0" mnemonicParsing="false" onAction="#btnToppings" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Toppings">
+      <Button layoutX="726.0" layoutY="97.0" mnemonicParsing="false" onAction="#btnToppings" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Toppings">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>
@@ -45,7 +41,7 @@
             <String fx:value="yellowButtons" />
          </styleClass>
       </Button>
-      <Button layoutX="972.0" layoutY="153.0" mnemonicParsing="false" onAction="#btnBeverages" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Beverages">
+      <Button layoutX="980.0" layoutY="96.0" mnemonicParsing="false" onAction="#btnBeverages" prefHeight="31.0" prefWidth="213.0" stylesheets="@../.style/style.css" text="Beverages">
          <font>
             <Font name="Motiva Sans Test Bold" size="17.0" />
          </font>
@@ -54,367 +50,10 @@
             <String fx:value="yellowButtons" />
          </styleClass>
       </Button>
-      <Pane fx:id="appBar" layoutX="348.0" layoutY="-6.0" prefHeight="58.0" prefWidth="942.0" styleClass="appBar" stylesheets="@../.style/style.css">
-         <children>
-            <Button fx:id="cartBtn" layoutX="864.0" layoutY="6.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="51.0" prefWidth="64.0" styleClass="profileButton" stylesheets="@../.style/style.css">
-               <graphic>
-                  <Pane prefHeight="51.0" prefWidth="64.0">
-                     <children>
-                        <ImageView fitHeight="39.0" fitWidth="42.0" layoutX="2.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../.style/cart-image.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-               </graphic></Button>
-            <Button fx:id="userBtn" layoutX="705.0" layoutY="4.0" mnemonicParsing="false" onAction="#seeProfile" prefHeight="53.0" prefWidth="139.0" styleClass="profileButton" stylesheets="@../.style/style.css">
-               <graphic>
-                  <Pane prefHeight="116.0" prefWidth="200.0">
-                     <children>
-                        <Label layoutX="50.0" layoutY="24.0" text="[USER_NAME]" textFill="#f5f5f5">
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </Label>
-                        <ImageView fitHeight="38.0" fitWidth="37.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../.style/userIcon_yellow.png" />
-                           </image>
-                        </ImageView>
-                        <Text fill="WHITE" layoutX="53.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="See Profile" />
-                     </children>
-                  </Pane>
-               </graphic>
-            </Button>
-         </children></Pane>
-      <Text layoutX="457.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
+      <Text layoutX="424.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu">
          <font>
             <Font name="System Bold" size="45.0" />
          </font>
       </Text>
-      <AnchorPane fx:id="crustMenu" layoutX="455.0" layoutY="228.0" prefHeight="525.0" prefWidth="729.0" stylesheets="@../.style/menuItems.css" visible="false">
-         <children>
-            <VBox layoutX="66.0" layoutY="135.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
-               <children>
-                  <ImageView fitHeight="161.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" styleClass="itemImage">
-                     <image>
-                        <Image url="@../.style/Thin-Crust-PIzza-2.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Thin Crust" textAlignment="CENTER" wrappingWidth="159.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$0.99" textAlignment="CENTER" wrappingWidth="160.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="284.0" layoutY="135.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
-               <children>
-                  <ImageView fitHeight="162.0" fitWidth="171.0" pickOnBounds="true" preserveRatio="true" styleClass="itemImage">
-                     <image>
-                        <Image url="@../.style/Stuffed_Crust.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Stuffed Crust" textAlignment="CENTER" wrappingWidth="159.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$0.99" textAlignment="CENTER" wrappingWidth="160.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="506.0" layoutY="135.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
-               <children>
-                  <ImageView fitHeight="153.0" fitWidth="166.0" pickOnBounds="true" preserveRatio="true" styleClass="itemImage">
-                     <image>
-                        <Image url="@../.style/deep_dish.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deep Dish" textAlignment="CENTER" wrappingWidth="159.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$0.99" textAlignment="CENTER" wrappingWidth="160.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="toppingsMenu" layoutX="465.0" layoutY="228.0" prefHeight="525.0" prefWidth="729.0" stylesheets="@../.style/menuItems.css" visible="false">
-         <children>
-            <VBox layoutX="26.0" layoutY="14.0" prefHeight="224.0" prefWidth="143.0" styleClass="menuItems">
-               <children>
-                  <Pane prefHeight="147.0" prefWidth="149.0">
-                     <children>
-                        <ImageView fitHeight="147.0" fitWidth="159.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" styleClass="imageContainer">
-                           <image>
-                              <Image url="@../.style/cheesePizza.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cheese" textAlignment="CENTER" wrappingWidth="153.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$0.99" textAlignment="CENTER" wrappingWidth="153.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="190.0" layoutY="14.0" prefHeight="224.0" prefWidth="143.0" styleClass="menuItems">
-               <children>
-                  <Pane prefHeight="147.0" prefWidth="149.0">
-                     <children>
-                        <ImageView fitHeight="147.0" fitWidth="147.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" styleClass="imageContainer">
-                           <image>
-                              <Image url="@../.style/pepperoniPizza.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pepperoni" textAlignment="CENTER" wrappingWidth="153.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$1.49" textAlignment="CENTER" wrappingWidth="153.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="353.0" layoutY="14.0" prefHeight="224.0" prefWidth="143.0" styleClass="menuItems">
-               <children>
-                  <Pane prefHeight="147.0" prefWidth="149.0">
-                     <children>
-                        <ImageView fitHeight="147.0" fitWidth="159.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" styleClass="imageContainer">
-                           <image>
-                              <Image url="@../.style/veggiePizza.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Veggie" textAlignment="CENTER" wrappingWidth="153.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$1.99" textAlignment="CENTER" wrappingWidth="153.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="524.0" layoutY="14.0" prefHeight="224.0" prefWidth="143.0" styleClass="menuItems">
-               <children>
-                  <Pane prefHeight="147.0" prefWidth="149.0">
-                     <children>
-                        <ImageView fitHeight="147.0" fitWidth="159.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" styleClass="imageContainer">
-                           <image>
-                              <Image url="@../.style/meatPizzas.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Meat" textAlignment="CENTER" wrappingWidth="153.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$2.49" textAlignment="CENTER" wrappingWidth="153.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="27.0" layoutY="247.0" prefHeight="224.0" prefWidth="143.0" styleClass="menuItems">
-               <children>
-                  <Pane prefHeight="147.0" prefWidth="149.0">
-                     <children>
-                        <ImageView fitHeight="147.0" fitWidth="159.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" styleClass="imageContainer">
-                           <image>
-                              <Image url="@../.style/3cheeseP.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3-Cheese" textAlignment="CENTER" wrappingWidth="153.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$1.99" textAlignment="CENTER" wrappingWidth="153.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="191.0" layoutY="247.0" prefHeight="224.0" prefWidth="143.0" styleClass="menuItems">
-               <children>
-                  <Pane prefHeight="147.0" prefWidth="149.0">
-                     <children>
-                        <ImageView fitHeight="147.0" fitWidth="147.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" styleClass="imageContainer">
-                           <image>
-                              <Image url="@../.style/bbqChicken.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BBQ Chicken" textAlignment="CENTER" wrappingWidth="153.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$2.99" textAlignment="CENTER" wrappingWidth="153.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="354.0" layoutY="247.0" prefHeight="224.0" prefWidth="143.0" styleClass="menuItems">
-               <children>
-                  <Pane prefHeight="147.0" prefWidth="149.0">
-                     <children>
-                        <ImageView fitHeight="147.0" fitWidth="159.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" styleClass="imageContainer">
-                           <image>
-                              <Image url="@../.style/ham-pizza.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ham" textAlignment="CENTER" wrappingWidth="153.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$1.79" textAlignment="CENTER" wrappingWidth="153.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="525.0" layoutY="247.0" prefHeight="224.0" prefWidth="143.0" styleClass="menuItems">
-               <children>
-                  <Pane prefHeight="147.0" prefWidth="149.0">
-                     <children>
-                        <ImageView fitHeight="147.0" fitWidth="159.0" layoutX="6.0" layoutY="-4.0" pickOnBounds="true" preserveRatio="true" styleClass="imageContainer">
-                           <image>
-                              <Image url="@../.style/mushroomP.jpg" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mushrooms" textAlignment="CENTER" wrappingWidth="153.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-                  <Text fill="#7030a0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="priceTag" text="\$1.29" textAlignment="CENTER" wrappingWidth="153.13671875">
-                     <font>
-                        <Font name="System Bold" size="29.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="beveragesMenu" layoutX="465.0" layoutY="238.0" prefHeight="525.0" prefWidth="729.0" stylesheets="@../.style/menuItems.css" visible="false">
-         <children>
-            <VBox layoutX="14.0" layoutY="55.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
-               <children>
-                  <ImageView fitHeight="161.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" styleClass="itemImage">
-                     <image>
-                        <Image url="@../.style/cocaCola.png" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Coca-Cola" textAlignment="CENTER" wrappingWidth="159.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="284.0" layoutY="55.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
-               <children>
-                  <ImageView fitHeight="161.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" styleClass="itemImage">
-                     <image>
-                        <Image url="@../.style/sprite.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Sprite" textAlignment="CENTER" wrappingWidth="159.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="540.0" layoutY="55.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
-               <children>
-                  <ImageView fitHeight="161.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" styleClass="itemImage">
-                     <image>
-                        <Image url="@../.style/pepsi.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pepsi" textAlignment="CENTER" wrappingWidth="159.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="117.0" layoutY="263.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
-               <children>
-                  <ImageView fitHeight="161.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" styleClass="itemImage">
-                     <image>
-                        <Image url="@../.style/mDew.jpg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mountain Dew" textAlignment="CENTER" wrappingWidth="159.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-            <VBox layoutX="459.0" layoutY="263.0" prefHeight="222.0" prefWidth="160.0" styleClass="menuItems">
-               <children>
-                  <ImageView fitHeight="161.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true" styleClass="itemImage">
-                     <image>
-                        <Image url="@../.style/lemonade.jpeg" />
-                     </image>
-                  </ImageView>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lemonade" textAlignment="CENTER" wrappingWidth="159.419921875">
-                     <font>
-                        <Font size="21.0" />
-                     </font>
-                  </Text>
-               </children>
-            </VBox>
-         </children>
-      </AnchorPane>
    </children>
 </AnchorPane>

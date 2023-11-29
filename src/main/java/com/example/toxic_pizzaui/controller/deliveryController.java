@@ -64,7 +64,7 @@ public class deliveryController {
             message.setText("Please enter your address or select another delivery option");
         }
         else{
-            Tp_Utils.changeScene(e, "pizzaCreation.fxml");
+            AppBarController.getInstance().changeScreen("pizzaCreation.fxml");
         }
     }
 
