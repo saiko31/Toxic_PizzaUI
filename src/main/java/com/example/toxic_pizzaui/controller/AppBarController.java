@@ -66,7 +66,6 @@ public class AppBarController implements Initializable {
         try{
             FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/cart.fxml"));
             newPane  = loader.load();
-
             cartPane.getChildren().add(newPane);
 
             cartController.getInstance().cartAnimation();
