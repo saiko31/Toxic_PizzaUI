@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -9,8 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane prefHeight="207.0" prefWidth="373.0" stylesheets="@../.style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.orderPaneController">
+<AnchorPane prefHeight="207.0" prefWidth="373.0" stylesheets="@../.style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.AddedToCartController">
    <children>
       <HBox layoutX="-1.0" layoutY="-1.0" prefHeight="208.0" prefWidth="374.0">
          <children>
@@ -29,19 +29,18 @@
                      <children>
                         <Pane prefHeight="43.0" prefWidth="237.0">
                            <children>
-                              <Text fx:id="pSizeDescription" layoutX="7.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="purpleText" text="Pizza Size" wrappingWidth="218.63671875">
+                              <Label fx:id="SIZE_label" layoutX="8.0" layoutY="8.0" style="-fx-text-fill: #6d3381;" stylesheets="@../.style/style.css" text="[SIZE]">
                                  <font>
                                     <Font name="System Bold" size="20.0" />
                                  </font>
-                              </Text>
+                              </Label>
                            </children>
                         </Pane>
                         <Pane prefHeight="37.0" prefWidth="237.0">
                            <children>
-                              <Text fx:id="pCrustDescription" layoutX="7.0" layoutY="22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pizza Crust" wrappingWidth="216.38671875" />
+                              <Text fx:id="DESCRIPTION_label" layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="[DESCRIPTION]" wrappingWidth="216.38671875" />
                            </children>
                         </Pane>
-                        <Pane prefHeight="120.0" prefWidth="237.0" />
                      </children>
                   </VBox>
                </children>

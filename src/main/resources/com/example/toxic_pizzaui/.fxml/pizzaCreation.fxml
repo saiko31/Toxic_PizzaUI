@@ -2,8 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.SplitMenuButton?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
@@ -426,17 +424,11 @@
             </Pane>
          </children>
       </VBox>
-      <Button fx:id="addToCrt" layoutX="1095.0" layoutY="665.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="146.0" styleClass="yellowButtons" text="Add to Cart">
+      <Button fx:id="addPizzaToCart" layoutX="1095.0" layoutY="665.0" mnemonicParsing="false" onAction="#addPizzaToCart" prefHeight="32.0" prefWidth="146.0" styleClass="yellowButtons" text="Add to Cart">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <SplitMenuButton layoutX="1008.0" layoutY="668.0" mnemonicParsing="false" text="Qty.">
-        <items>
-          <MenuItem mnemonicParsing="false" text="Action 1" />
-          <MenuItem mnemonicParsing="false" text="Action 2" />
-        </items>
-      </SplitMenuButton>
       <Button fx:id="clearBtn" layoutX="60.0" layoutY="664.0" mnemonicParsing="false" onAction="#clear" styleClass="navigationBtn" text="Clear">
          <font>
             <Font size="15.0" />
@@ -447,7 +439,7 @@
             <Font size="15.0" />
          </font>
       </Button>
-      <Label fx:id="priceLabel" layoutX="884.0" layoutY="657.0" text="\$0.00">
+      <Label fx:id="priceLabel" layoutX="978.0" layoutY="657.0" text="\$0.00">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>

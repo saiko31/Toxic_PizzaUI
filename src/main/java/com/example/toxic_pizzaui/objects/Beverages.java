@@ -22,19 +22,22 @@ public class Beverages {
         return size;
     }
 
-    public String getDrink() {
-        return drink;
-    }
-
     public float getPrice() {
-        return price;
+        return SIZE.getOrDefault(size.toLowerCase(), 0f);
     }
 
-    public Beverages(String size, String flavor){
+
+    public void setDrink(String drink) {
+        this.drink = drink;
+    }
+    public void setSize(String size){
         this.size = size;
-        price = SIZE.getOrDefault(size.toLowerCase(), 0f);
-        this.drink = flavor;
     }
 
 
+
+
+    public Beverages(){
+        this.price = 0.00f;
+    }
 }

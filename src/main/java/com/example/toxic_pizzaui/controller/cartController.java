@@ -40,13 +40,6 @@ public class cartController {
         }
     }
 
-    public void cartAnimation(){
-        sidePane.setTranslateX(sidePane.getWidth());
-
-        TranslateTransition transition = new TranslateTransition(Duration.seconds(0.5), sidePane);
-        transition.setToX(0);
-        transition.play();
-    }
 
     public static cartController getInstance(){
         return instance;

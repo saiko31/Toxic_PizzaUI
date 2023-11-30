@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -13,6 +17,98 @@
             <Font name="System Bold" size="61.0" />
          </font>
       </Text>
-      <Pane layoutX="986.0" layoutY="25.0" prefHeight="742.0" prefWidth="469.0" style="-fx-background-color: #D9D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Pane layoutX="986.0" layoutY="25.0" prefHeight="742.0" prefWidth="469.0" style="-fx-background-color: #D9D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="115.0" layoutY="680.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="240.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Place Order">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Text layoutX="28.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Order">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+            <Text layoutX="28.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order:">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <Label fx:id="DELIVERY_OPTION" layoutX="115.0" layoutY="92.0" prefHeight="17.0" prefWidth="228.0" text="[DELIVERY_OPTION]">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Text layoutX="26.0" layoutY="635.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL:">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <Label layoutX="300.0" layoutY="607.0" text="[FINAL_PRICE]">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Text layoutX="59.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verify your information">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="59.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <Text layoutX="103.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name and Address ">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Label fx:id="CUSTOMER_NAME" layoutX="103.0" layoutY="224.0" text="[CUSTOMER_NAME]">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="CUSTOMER_ADDRESS" layoutX="103.0" layoutY="273.0" text="[CUSTOMER-ADDRESS]">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Separator layoutX="28.0" layoutY="335.0" prefHeight="8.0" prefWidth="763.0" />
+      <Text layoutX="58.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+      </Text>
+      <Text layoutX="103.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Payment Info.">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <ToggleButton layoutX="70.0" layoutY="421.0" mnemonicParsing="false" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Debit / Credit Card">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="paymentOptions" />
+         </toggleGroup>
+      </ToggleButton>
+      <ToggleButton layoutX="71.0" layoutY="525.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="173.0" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Check Payment" toggleGroup="$paymentOptions">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </ToggleButton>
+      <ToggleButton layoutX="70.0" layoutY="643.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="173.0" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Cash" toggleGroup="$paymentOptions">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </ToggleButton>
+      <AnchorPane layoutX="313.0" layoutY="421.0" prefHeight="262.0" prefWidth="461.0" />
+      <Button layoutX="482.0" layoutY="286.0" mnemonicParsing="false" style="-fx-text-fill: #762f85;" styleClass="transparent" stylesheets="@../.style/style.css" text="Edit" underline="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -68,7 +68,6 @@ public class AppBarController implements Initializable {
             newPane  = loader.load();
             cartPane.getChildren().add(newPane);
 
-            cartController.getInstance().cartAnimation();
         }catch(Exception e){
             e.printStackTrace();
         }
