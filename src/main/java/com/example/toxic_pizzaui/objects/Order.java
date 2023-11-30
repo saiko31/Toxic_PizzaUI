@@ -11,8 +11,12 @@ public class Order {
 
     private float price;
 
+    private Customer customer;
+    private static int currentOrder = 100000000;
+
 
     public Order(){
+        currentOrder++;
         pizzaList = new ArrayList<>();
         beveragesList = new ArrayList<>();
     }
@@ -22,6 +26,29 @@ public class Order {
     }
     public void addBeverageToCart(Beverages beverages){
         beveragesList.add(beverages);
+    }
+
+    public float getPrice(){
+        float pizzasPrice = 0f;
+        float drinksPrice = 0f;
+
+        if(!pizzaList.isEmpty() && !beveragesList.isEmpty()) {
+            for (Beverages i : beveragesList) {
+                drinksPrice = +i.getPrice();
+            }
+            for (Pizza i : pizzaList) {
+                pizzasPrice = +i.getPrice();
+            }
+        }
+        return pizzasPrice + drinksPrice;
+    }
+
+    public List<Pizza> getPizzaList() {
+        return pizzaList;
+    }
+
+    public List<Beverages> getBeveragesList() {
+        return beveragesList;
     }
 
 

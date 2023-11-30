@@ -27,7 +27,17 @@ public class Topping {
     }
 
     public String getDescription() {
-        return description;
+        return switch (description){
+            case "cheese" -> "Cheese";
+            case "pepperoni" -> "Pepperoni";
+            case "veggie" -> "Veggie";
+            case "meat" -> "Meat";
+            case "threeCheese" -> "3-Cheese";
+            case "bbq" -> "BBQ-Chicken";
+            case "ham" -> "Ham";
+            case "mushrooms" -> "Mushrooms";
+            default -> "";
+        };
     }
 
     public float getPrice() {

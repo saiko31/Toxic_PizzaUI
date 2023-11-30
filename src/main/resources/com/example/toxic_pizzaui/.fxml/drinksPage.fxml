@@ -183,7 +183,7 @@
          </graphic>
       </ToggleButton>
       <Separator layoutX="65.0" layoutY="396.0" prefHeight="0.0" prefWidth="962.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="65.0" />
-      <Button layoutX="1085.0" layoutY="680.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="130.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Add to Cart">
+      <Button layoutX="1085.0" layoutY="680.0" mnemonicParsing="false" onAction="#addToCart" prefHeight="31.0" prefWidth="130.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Add to Cart">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

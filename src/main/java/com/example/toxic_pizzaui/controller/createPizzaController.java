@@ -1,7 +1,9 @@
 package com.example.toxic_pizzaui.controller;
 
 
+import com.example.toxic_pizzaui.DataHandling.OrderController;
 import com.example.toxic_pizzaui.objects.Crust;
+import com.example.toxic_pizzaui.objects.Order;
 import com.example.toxic_pizzaui.objects.Pizza;
 import com.example.toxic_pizzaui.objects.Topping;
 import com.example.toxic_pizzaui.Tp_Utils;
@@ -36,6 +38,8 @@ public class createPizzaController implements Initializable {
     private Label toppingsCounter;
 
     private Pizza newPizza;
+
+    private Order order;
 
 
 
@@ -74,12 +78,12 @@ public class createPizzaController implements Initializable {
     @FXML
     private void selectToppings(ActionEvent e){
 
-        if(newPizza.getToppings() <=3){
+        if(newPizza.getToppingsNumbers() <=3){
             ToggleButton selected = (ToggleButton) toppingsBtn.getSelectedToggle();
             if(selected != null){
                 newPizza.addTopping(new Topping(selected.getAccessibleText().toLowerCase()));
             }
-            toppingsCounter.setText(newPizza.getToppings() + " out of 4");
+            toppingsCounter.setText(newPizza.getToppingsNumbers() + " out of 4");
             setLabelPrice();
         }
 
@@ -93,7 +97,7 @@ public class createPizzaController implements Initializable {
         Tp_Utils.deselectAllToggles(toppingsBtn);
 
         newPizza.clear();
-        toppingsCounter.setText(newPizza.getToppings() + " out of 4");
+        toppingsCounter.setText(newPizza.getToppingsNumbers() + " out of 4");
         setLabelPrice();
     }
 
@@ -105,6 +109,13 @@ public class createPizzaController implements Initializable {
 
     @FXML
     private void addPizzaToCart(){
-        AppBarController.getInstance().changeScreen("drinksPage.fxml");
+        if(newPizza.getSize() == null || newPizza.getCrustOption() == null){
+            //GENERATE A MESSAGE WINDOW "PLEASE SELECT A PIZZA SIZE AND AT LEAST ONE CRUST"
+        }
+        else{
+            //ADDS THE PIZZA TO THE ORDER AND JUMP TO THE NEXT SCREEN
+            OrderController.getOrder().addPizzaToCart(newPizza);
+            AppBarController.getInstance().changeScreen("drinksPage.fxml");
+        }
     }
 }

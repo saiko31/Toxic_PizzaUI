@@ -1,6 +1,8 @@
 package com.example.toxic_pizzaui.controller;
 
+import com.example.toxic_pizzaui.DataHandling.OrderController;
 import com.example.toxic_pizzaui.Tp_Utils;
+import com.example.toxic_pizzaui.objects.Order;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
@@ -9,11 +11,7 @@ import java.io.IOException;
 
 public class MainPageController{
 
-    AppBarController appBarController;
-
-
-
-    private Stage stage;
+    private Order order;
 
 
     @FXML
@@ -34,7 +32,9 @@ public class MainPageController{
 
 
     @FXML
-    private void startOrder(ActionEvent e) throws IOException{                      /// Press the "Start Order Button", will jump to the order type selection page
+    private void startOrder(ActionEvent e) throws IOException{
+       //CREATES AN NEW ORDER OBJECT, DISABLES THE "SEE PROFILE BUTTON", AND JUMPS TO THE NEXT SCREEN
+        OrderController.startNewOrder();
         AppBarController.getInstance().changeScreen("deliveryOptionPage.fxml");
         AppBarController.getInstance().setProfileBtn(true);
     }

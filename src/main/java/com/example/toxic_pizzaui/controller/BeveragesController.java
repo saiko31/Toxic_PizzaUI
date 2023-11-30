@@ -1,5 +1,6 @@
 package com.example.toxic_pizzaui.controller;
 
+import com.example.toxic_pizzaui.DataHandling.OrderController;
 import com.example.toxic_pizzaui.Tp_Utils;
 import com.example.toxic_pizzaui.objects.Beverages;
 import javafx.event.ActionEvent;
@@ -32,7 +33,9 @@ public class BeveragesController implements Initializable {
 
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {newBeverage = new Beverages();}
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        newBeverage = new Beverages();}
 
     @FXML
     private void continueShopping(ActionEvent e) throws IOException {
@@ -55,6 +58,18 @@ public class BeveragesController implements Initializable {
 
         if(selected != null){
             newBeverage.setDrink(selected.getAccessibleText());
+        }
+
+    }
+
+    @FXML
+    private void addToCart(){
+        if(newBeverage.getSize() == null || newBeverage.getSize() == null && newBeverage.getSize().equals("")){
+            //GENERATE A MESSAGE WINDOW "PLEASE SELECT A DRINK SIZE AND A FLAVOR"
+
+        }else{
+            OrderController.getOrder().addBeverageToCart(newBeverage);
+            Tp_Utils.loadFxml(newBeverage, pizzaPane);
         }
     }
 

@@ -1,5 +1,8 @@
 package com.example.toxic_pizzaui;
 
+import com.example.toxic_pizzaui.controller.AddedToCartController;
+import com.example.toxic_pizzaui.objects.Beverages;
+import com.example.toxic_pizzaui.objects.Pizza;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -44,6 +48,60 @@ public class Tp_Utils {
 
         return Float.parseFloat(roundedValueString);
     }
+
+    public static void addedToCart(Pizza pizza, VBox location){
+        try {
+            FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/AddedToCartPane.fxml"));
+            AnchorPane pane = loader.load();
+            AddedToCartController controller = loader.getController();
+            controller.setData(pizza);
+            location.getChildren().add(pane);
+        }catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    public static void addedToCart(Beverages beverages, VBox location) {
+        try {
+            FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/AddedToCartPane.fxml"));
+            AnchorPane pane = loader.load();
+            AddedToCartController controller = loader.getController();
+            controller.setData(beverages);
+            location.getChildren().add(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+
+        }
+    }
+
+    public static void loadFxml(Beverages beverages, AnchorPane location) {
+        try {
+            FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/AddedToCartPane.fxml"));
+            AnchorPane pane = loader.load();
+            AddedToCartController controller = loader.getController();
+            controller.setData(beverages);
+            location.getChildren().add(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+
+        }
+    }
+
+    public static void loadFxml(Pizza pizza, AnchorPane location) {
+        try {
+            FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/AddedToCartPane.fxml"));
+            AnchorPane pane = loader.load();
+            AddedToCartController controller = loader.getController();
+            controller.setData(pizza);
+            location.getChildren().add(pane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+
+        }
+    }
+
+
 
 
 
