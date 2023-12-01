@@ -1,5 +1,6 @@
 package com.example.toxic_pizzaui.controller;
 
+import com.example.toxic_pizzaui.DataHandling.OrderController;
 import com.example.toxic_pizzaui.objects.Beverages;
 import com.example.toxic_pizzaui.objects.Pizza;
 import javafx.fxml.FXML;
@@ -18,6 +19,8 @@ public class AddedToCartController {
 
     @FXML
     private ImageView itemImage;
+
+
 
     public void setData(Pizza pizza) {
         setPizzaImage(pizza);
@@ -42,5 +45,11 @@ public class AddedToCartController {
         Image image = new Image(getClass().getResourceAsStream(imagePath));
         itemImage.setImage(image);
     }
+
+    @FXML
+    private void remove(){
+    }
+
+
 }
 

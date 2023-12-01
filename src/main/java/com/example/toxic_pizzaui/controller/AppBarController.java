@@ -1,23 +1,14 @@
 
-
-
-
-
-
-
-
 package com.example.toxic_pizzaui.controller;
 
 
 import com.example.toxic_pizzaui.Tp_Utils;
-import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.util.Duration;
 
 import java.io.IOException;
 import java.net.URL;
@@ -94,6 +85,10 @@ public class AppBarController implements Initializable {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public AnchorPane getCartPane(){
+        return cartPane;
     }
 
     public static AppBarController getInstance(){

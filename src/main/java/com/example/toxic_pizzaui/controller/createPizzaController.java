@@ -111,6 +111,7 @@ public class createPizzaController implements Initializable {
     private void addPizzaToCart(){
         if(newPizza.getSize() == null || newPizza.getCrustOption() == null){
             //GENERATE A MESSAGE WINDOW "PLEASE SELECT A PIZZA SIZE AND AT LEAST ONE CRUST"
+            Tp_Utils.showMessage("ERROR", "Please select a pizza size and at least one crust");
         }
         else{
             //ADDS THE PIZZA TO THE ORDER AND JUMP TO THE NEXT SCREEN

@@ -30,12 +30,10 @@ public class CartController implements Initializable {
     @FXML
     private Button checkoutBtn;
 
-    @FXML
-    private Pane sidePane;
-
     private List<Pizza> pizzaList;
 
     private List<Beverages> beveragesList;
+
     public CartController() {
         instance = this;
     }
@@ -65,20 +63,20 @@ public class CartController implements Initializable {
                 for (Pizza pizza : pizzaList) {
                     Tp_Utils.addedToCart(pizza, itemsList);
                 }
-            }
-            else if(beveragesList.size() > 0){
-                for(Beverages beverage: beveragesList){
-                    Tp_Utils.addedToCart(beverage, itemsList);
+                if(beveragesList.size() > 0){
+                    for(Beverages beverage: beveragesList){
+                        Tp_Utils.addedToCart(beverage, itemsList);
+                    }
                 }
             }
             else{
-                if (itemsList.contains(null)) {
-                    checkoutBtn.setDisable(false);
-                }
+                checkoutBtn.setDisable(false);
             }
         }
 
     }
+
+
 
     private void createSamplePizza() {
         Pizza pizza1 = new Pizza();

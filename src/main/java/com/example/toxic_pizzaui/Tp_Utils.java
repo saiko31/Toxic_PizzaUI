@@ -1,6 +1,8 @@
 package com.example.toxic_pizzaui;
 
 import com.example.toxic_pizzaui.controller.AddedToCartController;
+import com.example.toxic_pizzaui.controller.AppBarController;
+import com.example.toxic_pizzaui.controller.messageController;
 import com.example.toxic_pizzaui.objects.Beverages;
 import com.example.toxic_pizzaui.objects.Pizza;
 import javafx.event.ActionEvent;
@@ -100,6 +102,64 @@ public class Tp_Utils {
 
         }
     }
+
+    /*The following methods are for load fxml file where necessary and being able to remove them*/
+
+    private static AnchorPane loadedPane;
+
+    public static void loadFxml(AnchorPane location, String fxmlFile) {
+        try {
+            FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/" + fxmlFile));
+            loadedPane = loader.load();
+            location.getChildren().add(loadedPane);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+
+        }
+    }
+
+
+    public static void removeFxml(AnchorPane location){
+            location.getChildren().remove(loadedPane);
+    }
+
+    /*The following methods are used to show a message at the center of the screen*/
+
+    private static AnchorPane newPane;
+    private static AnchorPane messagePane;
+
+
+    public static void showMessage(String messageHeader, String message){
+        newPane = AppBarController.getInstance().getCartPane();
+        newPane.setDisable(false);
+
+        try{
+            FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/messagePopUp.fxml"));
+            messagePane = loader.load();
+
+            AnchorPane.setTopAnchor(messagePane, 0.0);
+            AnchorPane.setBottomAnchor(messagePane, 0.0);
+            AnchorPane.setLeftAnchor(messagePane, 0.0);
+            AnchorPane.setRightAnchor(messagePane, 0.0);
+
+            messageController messageController = loader.getController();
+
+            messageController.setMessage(messageHeader, message);
+
+            newPane.getChildren().add(messagePane);
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void closeMessage(){
+        newPane = AppBarController.getInstance().getCartPane();
+        newPane.setDisable(true);
+        newPane.getChildren().remove(messagePane);
+    }
+
+
+
 
 
 

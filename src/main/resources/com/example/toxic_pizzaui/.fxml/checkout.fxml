@@ -7,10 +7,11 @@
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="742.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.CheckoutController">
    <children>
       <Text layoutX="58.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Checkout">
          <font>
@@ -44,11 +45,12 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Text>
-            <Label layoutX="300.0" layoutY="607.0" text="[FINAL_PRICE]">
+            <Label fx:id="FINAl_PRICE_LABEL" layoutX="300.0" layoutY="607.0" text="[FINAL_PRICE]">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
+            <VBox fx:id="orderList" layoutX="79.0" layoutY="155.0" prefHeight="425.0" prefWidth="312.0" />
          </children></Pane>
       <Text layoutX="59.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verify your information">
          <font>

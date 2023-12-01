@@ -16,13 +16,13 @@
    <children>
       <Pane layoutY="21.0" prefHeight="221.0" prefWidth="1280.0" style="-fx-background-color: #d9d9d9;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <AnchorPane fx:id="pizzaPane" layoutX="53.0" layoutY="7.0" prefHeight="207.0" prefWidth="373.0" />
+            <AnchorPane fx:id="pizzaPane" layoutX="79.0" layoutY="32.0" prefHeight="157.0" prefWidth="373.0" />
             <Text layoutX="714.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Succesfully added to Cart">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
             </Text>
-            <Button layoutX="940.0" layoutY="97.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="191.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Checkout">
+            <Button layoutX="940.0" layoutY="97.0" mnemonicParsing="false" onAction="#goToCheckout" prefHeight="62.0" prefWidth="191.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Checkout">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -193,7 +193,7 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Button layoutX="100.0" layoutY="680.0" mnemonicParsing="false" styleClass="transparent" stylesheets="@../.style/style.css" text="Clear" underline="true">
+      <Button layoutX="100.0" layoutY="680.0" mnemonicParsing="false" onAction="#clear" styleClass="transparent" stylesheets="@../.style/style.css" text="Clear" underline="true">
          <font>
             <Font size="15.0" />
          </font>

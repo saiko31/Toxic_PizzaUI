@@ -24,6 +24,15 @@ public class Crust {
         this.price = CRUST.getOrDefault(description.toLowerCase(), 0f);
     }
 
+    public String printDescription() {
+        return switch (description) {
+            case "thin" -> "Thin Crust";
+            case "stuffed" -> "Deep Dish";
+            case "deep" -> "Stuffed Crust";
+            default -> "";
+        };
+    }
+
     public String getDescription() {
         return description;
     }

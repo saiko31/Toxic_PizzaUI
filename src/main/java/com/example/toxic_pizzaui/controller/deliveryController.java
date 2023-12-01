@@ -1,5 +1,6 @@
 package com.example.toxic_pizzaui.controller;
 
+import com.example.toxic_pizzaui.DataHandling.OrderController;
 import com.example.toxic_pizzaui.Tp_Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -44,9 +45,11 @@ public class deliveryController {
     @FXML
     private void deliverySelection(ActionEvent e) throws IOException {
         if(deliveryBtn.isSelected()){
+            OrderController.getOrder().setDeliveryOption("Home Delivery");
             enterAdressPane.setVisible(true);
         }
         else if(pickupBtn.isSelected()){
+            OrderController.getOrder().setDeliveryOption("In-Store Pickup");
             enterAdressPane.setVisible(false);
         }
     }
@@ -60,11 +63,11 @@ public class deliveryController {
 
     @FXML
     private void continueBtn(ActionEvent e){
-        if(deliveryBtn.isSelected() && addressLine.getText().isEmpty() == true && cityLine.getText().isEmpty() == true && zip_line.getText().isEmpty() == true){
-            messagePane.setVisible(true);
-            message.setText("Please enter your address or select another delivery option");
-        }
-        else{
+        if(deliveryBtn.isSelected() && (addressLine.getText().isEmpty() == true || cityLine.getText().isEmpty() == true || zip_line.getText().isEmpty() == true)){
+            Tp_Utils.showMessage("ERROR", "Please enter your delivery information");
+        } else if (!deliveryBtn.isSelected() && !pickupBtn.isSelected()) {
+            Tp_Utils.showMessage("ERROR", "Please select a delivery option");
+        } else{
             AppBarController.getInstance().changeScreen("pizzaCreation.fxml");
         }
     }

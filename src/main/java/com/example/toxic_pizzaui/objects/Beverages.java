@@ -13,6 +13,7 @@ public class Beverages {
     private static final Map<String, Float> SIZE= new HashMap<>();
 
     static{
+        SIZE.put("none", 0f);
         SIZE.put("small", 1.99f);
         SIZE.put("medium", 2.49f);
         SIZE.put("large", 2.49f);
@@ -56,6 +57,11 @@ public class Beverages {
     }
     public void setSize(String size){
         this.size = size;
+    }
+
+    public void clear(){
+        setSize("none");
+        setDrink(null);
     }
 
     public Beverages(){

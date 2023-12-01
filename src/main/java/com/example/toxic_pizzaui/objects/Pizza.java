@@ -56,7 +56,7 @@ public class Pizza {
     }
 
     public String printDescription() {
-        return "Crust\n" + printToppings();
+        return crustOption.printDescription() + "\n" + printToppings();
     }
 
     public String printSize() {

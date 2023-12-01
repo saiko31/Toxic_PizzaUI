@@ -9,6 +9,8 @@ public class Order {
 
     private List<Beverages> beveragesList;
 
+    private String deliveryOption;
+
     private float price;
 
     private Customer customer;
@@ -26,6 +28,10 @@ public class Order {
     }
     public void addBeverageToCart(Beverages beverages){
         beveragesList.add(beverages);
+    }
+
+    public void setDeliveryOption(String delivery){
+        this.deliveryOption = delivery;
     }
 
     public float getPrice(){
@@ -50,6 +56,18 @@ public class Order {
     public List<Beverages> getBeveragesList() {
         return beveragesList;
     }
+
+    public String getDeliveryOption(){
+        return deliveryOption;
+    }
+
+    public void removePizza(Pizza removedPizza){
+        pizzaList.remove(removedPizza);
+    }
+    public void removeBeverage(Beverages removedBeverage){
+        beveragesList.remove(removedBeverage);
+    }
+
 
 
 }
