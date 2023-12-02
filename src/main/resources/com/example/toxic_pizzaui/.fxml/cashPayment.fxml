@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="creditCard" prefHeight="346.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.CreditCardController">
+   <children>
+      <Text layoutX="45.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pay at the time of delivery" textAlignment="CENTER" AnchorPane.bottomAnchor="157.9775390625" AnchorPane.topAnchor="155.0224609375">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
