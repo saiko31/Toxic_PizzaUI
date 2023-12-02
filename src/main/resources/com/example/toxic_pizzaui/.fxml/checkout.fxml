@@ -20,7 +20,7 @@
       </Text>
       <Pane layoutX="986.0" layoutY="25.0" prefHeight="742.0" prefWidth="469.0" style="-fx-background-color: #D9D9D9;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Button layoutX="115.0" layoutY="680.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="240.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Place Order">
+            <Button layoutX="115.0" layoutY="680.0" mnemonicParsing="false" onAction="#placeOrder" prefHeight="39.0" prefWidth="240.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Place Order">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -45,34 +45,34 @@
                   <Font name="System Bold" size="25.0" />
                </font>
             </Text>
-            <Label fx:id="FINAl_PRICE_LABEL" layoutX="300.0" layoutY="607.0" text="[FINAL_PRICE]">
+            <Label fx:id="FINAl_PRICE_LABEL" layoutX="358.0" layoutY="607.0" prefHeight="36.0" prefWidth="97.0" text="[FINAL_PRICE]">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <VBox fx:id="orderList" layoutX="79.0" layoutY="155.0" prefHeight="425.0" prefWidth="312.0" />
+            <VBox fx:id="orderList" layoutX="43.0" layoutY="159.0" prefHeight="425.0" prefWidth="312.0" />
          </children></Pane>
-      <Text layoutX="59.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verify your information">
+      <Text layoutX="59.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verify your information">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="59.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text layoutX="59.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font name="System Bold" size="37.0" />
          </font>
       </Text>
-      <Text layoutX="103.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name and Address ">
+      <Text layoutX="103.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name and Address ">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Text>
-      <Label fx:id="CUSTOMER_NAME" layoutX="103.0" layoutY="224.0" text="[CUSTOMER_NAME]">
+      <Label fx:id="CUSTOMER_NAME" layoutX="103.0" layoutY="209.0" text="[CUSTOMER_NAME]">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Label fx:id="CUSTOMER_ADDRESS" layoutX="103.0" layoutY="273.0" text="[CUSTOMER-ADDRESS]">
+      <Label fx:id="CUSTOMER_ADDRESS" layoutX="103.0" layoutY="258.0" text="[CUSTOMER-ADDRESS]">
          <font>
             <Font size="19.0" />
          </font>
@@ -88,7 +88,7 @@
             <Font name="System Bold" size="23.0" />
          </font>
       </Text>
-      <ToggleButton layoutX="70.0" layoutY="421.0" mnemonicParsing="false" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Debit / Credit Card">
+      <ToggleButton accessibleText="Debit / Credit Card" layoutX="70.0" layoutY="421.0" mnemonicParsing="false" onAction="#selectPaymentOption" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Debit / Credit Card">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
@@ -96,21 +96,21 @@
             <ToggleGroup fx:id="paymentOptions" />
          </toggleGroup>
       </ToggleButton>
-      <ToggleButton layoutX="71.0" layoutY="525.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="173.0" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Check Payment" toggleGroup="$paymentOptions">
+      <ToggleButton accessibleText="Check" layoutX="71.0" layoutY="525.0" mnemonicParsing="false" onAction="#selectPaymentOption" prefHeight="38.0" prefWidth="173.0" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Check Payment" toggleGroup="$paymentOptions">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </ToggleButton>
-      <ToggleButton layoutX="70.0" layoutY="643.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="173.0" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Cash" toggleGroup="$paymentOptions">
+      <ToggleButton fx:id="cashOption" accessibleText="Cash" layoutX="70.0" layoutY="643.0" mnemonicParsing="false" onAction="#selectPaymentOption" prefHeight="38.0" prefWidth="173.0" styleClass="toppingButtons" stylesheets="@../.style/style.css" text="Cash" toggleGroup="$paymentOptions">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
       </ToggleButton>
-      <AnchorPane layoutX="313.0" layoutY="421.0" prefHeight="262.0" prefWidth="461.0" />
-      <Button layoutX="482.0" layoutY="286.0" mnemonicParsing="false" style="-fx-text-fill: #762f85;" styleClass="transparent" stylesheets="@../.style/style.css" text="Edit" underline="true">
+      <Button layoutX="674.0" layoutY="286.0" mnemonicParsing="false" style="-fx-text-fill: #762f85;" styleClass="transparent" stylesheets="@../.style/style.css" text="Edit" underline="true">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Button>
+      <AnchorPane fx:id="paymentInfo" layoutX="374.0" layoutY="366.0" prefHeight="346.0" prefWidth="400.0" />
    </children>
 </AnchorPane>

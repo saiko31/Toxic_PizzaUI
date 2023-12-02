@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="527.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="63.0" layoutY="58.0" prefHeight="193.0" prefWidth="82.0" styleClass="whitePane" stylesheets="@../.style/style.css" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="58.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../.style/cheesePizza.jpg" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Cheese" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7030A0;" text="\$0.99" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="224.0" layoutY="60.0" prefHeight="193.0" prefWidth="82.0" styleClass="whitePane" stylesheets="@../.style/style.css" AnchorPane.topAnchor="58.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../.style/pepperoniPizza.jpg" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pepperoni" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7030A0;" text="\$1.49" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="399.0" layoutY="61.0" prefHeight="193.0" prefWidth="82.0" styleClass="whitePane" stylesheets="@../.style/style.css" AnchorPane.topAnchor="58.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../.style/veggiePizza.jpg" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Veggie" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7030A0;" text="\$1.99" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="560.0" layoutY="55.0" prefHeight="193.0" prefWidth="82.0" styleClass="whitePane" stylesheets="@../.style/style.css" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="58.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../.style/meatPizzas.jpg" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Meat" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7030A0;" text="\$2.49" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="57.0" layoutY="266.0" prefHeight="193.0" prefWidth="82.0" styleClass="whitePane" stylesheets="@../.style/style.css" AnchorPane.leftAnchor="46.0" AnchorPane.topAnchor="266.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../.style/3cheeseP.jpg" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3-Cheese" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7030A0;" text="\$0.99" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="229.0" layoutY="258.0" prefHeight="193.0" prefWidth="82.0" styleClass="whitePane" stylesheets="@../.style/style.css" AnchorPane.topAnchor="266.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../.style/bbqChicken.jpg" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="BBQ Chicken" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7030A0;" text="\$1.49" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="395.0" layoutY="261.0" prefHeight="193.0" prefWidth="82.0" styleClass="whitePane" stylesheets="@../.style/style.css" AnchorPane.topAnchor="266.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../.style/ham-pizza.jpg" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ham" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7030A0;" text="\$1.99" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+      <VBox layoutX="554.0" layoutY="263.0" prefHeight="193.0" prefWidth="82.0" styleClass="whitePane" stylesheets="@../.style/style.css" AnchorPane.rightAnchor="46.0" AnchorPane.topAnchor="266.0">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../.style/mushroomP.jpg" />
+               </image>
+            </ImageView>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mushrooms" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #7030A0;" text="\$2.49" textAlignment="CENTER" wrappingWidth="121.0">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

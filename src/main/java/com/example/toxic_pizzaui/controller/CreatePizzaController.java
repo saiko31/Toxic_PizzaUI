@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
-public class createPizzaController implements Initializable {
+public class CreatePizzaController implements Initializable {
 
 
     @FXML
@@ -46,6 +46,7 @@ public class createPizzaController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         newPizza = new Pizza();
+        setLabelPrice();
     }
 
 
@@ -72,21 +73,27 @@ public class createPizzaController implements Initializable {
         if(selected != null){
             newPizza.setCrustOption(new Crust(selected.getAccessibleText().toLowerCase()));
             setLabelPrice();
+            //Enable toppingButtons when a crust is chosen
+            enableToppings(true);
+        }
+        else{
+            enableToppings(false);
         }
 
     }
     @FXML
-    private void selectToppings(ActionEvent e){
-
-        if(newPizza.getToppingsNumbers() <=3){
+    private void selectToppings(ActionEvent e) {
+        if (newPizza.getToppingsNumbers() < 4) {
             ToggleButton selected = (ToggleButton) toppingsBtn.getSelectedToggle();
-            if(selected != null){
+            if (selected != null) {
                 newPizza.addTopping(new Topping(selected.getAccessibleText().toLowerCase()));
             }
             toppingsCounter.setText(newPizza.getToppingsNumbers() + " out of 4");
             setLabelPrice();
+        } else {
+            // Inform the user that they can't select more than 4 topping
+            Tp_Utils.showMessage("Ups!...", "You can choose only up to 4 toppings");
         }
-
     }
 
     @FXML
@@ -103,8 +110,10 @@ public class createPizzaController implements Initializable {
 
 
 
-    private void setLabelPrice(){                        //Updates the price tag
-        priceLabel.setText("$" + newPizza.getPrice());
+    private void setLabelPrice(){
+        //Updates the price tag
+        float pizzaPrice = Tp_Utils.roundPrices(newPizza.getPrice());
+        priceLabel.setText("$" + pizzaPrice);
     }
 
     @FXML
@@ -118,5 +127,13 @@ public class createPizzaController implements Initializable {
             OrderController.getOrder().addPizzaToCart(newPizza);
             AppBarController.getInstance().changeScreen("drinksPage.fxml");
         }
+    }
+
+    //Enable and disables the topping buttons until a crust is selected
+    private void enableToppings(boolean enable){
+        toppingsBtn.getToggles().forEach(toggle -> {
+            ToggleButton button = (ToggleButton) toggle;
+            button.setDisable(!enable);
+        });
     }
 }

@@ -2,7 +2,7 @@ package com.example.toxic_pizzaui;
 
 import com.example.toxic_pizzaui.controller.AddedToCartController;
 import com.example.toxic_pizzaui.controller.AppBarController;
-import com.example.toxic_pizzaui.controller.messageController;
+import com.example.toxic_pizzaui.controller.MessageController;
 import com.example.toxic_pizzaui.objects.Beverages;
 import com.example.toxic_pizzaui.objects.Pizza;
 import javafx.event.ActionEvent;
@@ -44,7 +44,7 @@ public class Tp_Utils {
         });
     }
 
-    public float roundPrices(float price){
+    public static  float roundPrices(float price){
         DecimalFormat decimalFormat = new DecimalFormat("#.##");
         String roundedValueString = decimalFormat.format(price);
 
@@ -78,6 +78,7 @@ public class Tp_Utils {
     }
 
     public static void loadFxml(Beverages beverages, AnchorPane location) {
+        location.getChildren().clear();
         try {
             FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/AddedToCartPane.fxml"));
             AnchorPane pane = loader.load();
@@ -91,6 +92,7 @@ public class Tp_Utils {
     }
 
     public static void loadFxml(Pizza pizza, AnchorPane location) {
+        location.getChildren().clear();
         try {
             FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/AddedToCartPane.fxml"));
             AnchorPane pane = loader.load();
@@ -108,6 +110,7 @@ public class Tp_Utils {
     private static AnchorPane loadedPane;
 
     public static void loadFxml(AnchorPane location, String fxmlFile) {
+        location.getChildren().clear();
         try {
             FXMLLoader loader = new FXMLLoader(Tp_Utils.class.getResource("/com/example/toxic_pizzaui/.fxml/" + fxmlFile));
             loadedPane = loader.load();
@@ -118,10 +121,6 @@ public class Tp_Utils {
         }
     }
 
-
-    public static void removeFxml(AnchorPane location){
-            location.getChildren().remove(loadedPane);
-    }
 
     /*The following methods are used to show a message at the center of the screen*/
 
@@ -142,7 +141,7 @@ public class Tp_Utils {
             AnchorPane.setLeftAnchor(messagePane, 0.0);
             AnchorPane.setRightAnchor(messagePane, 0.0);
 
-            messageController messageController = loader.getController();
+            MessageController messageController = loader.getController();
 
             messageController.setMessage(messageHeader, message);
 
@@ -157,6 +156,8 @@ public class Tp_Utils {
         newPane.setDisable(true);
         newPane.getChildren().remove(messagePane);
     }
+
+
 
 
 

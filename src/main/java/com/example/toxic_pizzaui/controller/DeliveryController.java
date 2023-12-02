@@ -12,7 +12,7 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 
-public class deliveryController {
+public class DeliveryController {
     @FXML
     private ToggleGroup deliveryOptions;
 

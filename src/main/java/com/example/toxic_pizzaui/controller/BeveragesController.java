@@ -78,7 +78,6 @@ public class BeveragesController implements Initializable {
 
         }else{
             OrderController.getOrder().addBeverageToCart(newBeverage);
-            Tp_Utils.removeFxml(pizzaPane);
             Tp_Utils.loadFxml(newBeverage, pizzaPane);
         }
     }

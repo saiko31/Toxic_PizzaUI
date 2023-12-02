@@ -16,6 +16,8 @@ public class Order {
     private Customer customer;
     private static int currentOrder = 100000000;
 
+    private String paymentOption;
+
 
     public Order(){
         currentOrder++;
@@ -38,12 +40,12 @@ public class Order {
         float pizzasPrice = 0f;
         float drinksPrice = 0f;
 
-        if(!pizzaList.isEmpty() && !beveragesList.isEmpty()) {
+        if(pizzaList.size() > 0 || beveragesList.size() > 0) {
             for (Beverages i : beveragesList) {
-                drinksPrice = +i.getPrice();
+                drinksPrice += i.getPrice();
             }
             for (Pizza i : pizzaList) {
-                pizzasPrice = +i.getPrice();
+                pizzasPrice += i.getPrice();
             }
         }
         return pizzasPrice + drinksPrice;
@@ -61,11 +63,17 @@ public class Order {
         return deliveryOption;
     }
 
+    public String getPaymentOption(){return deliveryOption;}
+
     public void removePizza(Pizza removedPizza){
         pizzaList.remove(removedPizza);
     }
     public void removeBeverage(Beverages removedBeverage){
         beveragesList.remove(removedBeverage);
+    }
+
+    public void setPaymentOption(String paymentOption){
+        this.paymentOption = paymentOption;
     }
 
 

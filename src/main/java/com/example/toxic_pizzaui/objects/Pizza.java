@@ -40,7 +40,7 @@ public class Pizza {
     }
 
     public float getPrice() {
-        float sizePrice = PIZZA_SIZE.getOrDefault(size.toLowerCase(), 0f);
+        float sizePrice = PIZZA_SIZE.getOrDefault((size != null) ? size.toLowerCase() : "", 0f);
         float crustPrice = (crustOption != null) ? crustOption.getPrice() : 0f;
         float toppingsPrice = toppings.stream().map(Topping::getPrice).reduce(0f, Float::sum);
 

@@ -3,13 +3,9 @@ package com.example.toxic_pizzaui.controller;
 
 import com.example.toxic_pizzaui.Tp_Utils;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
 
-import java.io.IOException;
-
-public class messageController{
+public class MessageController {
     @FXML
     private Label message;
 
@@ -18,7 +14,7 @@ public class messageController{
 
 
 
-    public messageController(){
+    public MessageController(){
 
     }
 

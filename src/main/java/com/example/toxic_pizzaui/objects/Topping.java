@@ -12,7 +12,7 @@ public class Topping {
         toppings.put("pepperoni", 1.49f);
         toppings.put("veggie", 1.99f);
         toppings.put("meat", 2.49f);
-        toppings.put("threeCheese", 1.99f);
+        toppings.put("threecheese", 1.99f);
         toppings.put("bbq", 2.99f);
         toppings.put("ham", 1.79f);
         toppings.put("mushrooms", 1.29f);
@@ -32,7 +32,7 @@ public class Topping {
             case "pepperoni" -> "Pepperoni";
             case "veggie" -> "Veggie";
             case "meat" -> "Meat";
-            case "threeCheese" -> "3-Cheese";
+            case "threecheese" -> "3-Cheese";
             case "bbq" -> "BBQ-Chicken";
             case "ham" -> "Ham";
             case "mushrooms" -> "Mushrooms";

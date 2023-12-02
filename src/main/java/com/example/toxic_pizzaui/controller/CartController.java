@@ -54,35 +54,24 @@ public class CartController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        if(OrderController.getOrder() != null){
+        if (OrderController.getOrder() != null) {
             pizzaList = OrderController.getOrder().getPizzaList();
             beveragesList = OrderController.getOrder().getBeveragesList();
 
-
-            if(pizzaList.size() > 0){
+            if (pizzaList.size() > 0 || beveragesList.size() > 0) {
                 for (Pizza pizza : pizzaList) {
                     Tp_Utils.addedToCart(pizza, itemsList);
                 }
-                if(beveragesList.size() > 0){
-                    for(Beverages beverage: beveragesList){
-                        Tp_Utils.addedToCart(beverage, itemsList);
-                    }
+
+                for (Beverages beverage : beveragesList) {
+                    Tp_Utils.addedToCart(beverage, itemsList);
                 }
             }
-            else{
-                checkoutBtn.setDisable(false);
-            }
         }
-
+        else{
+            checkoutBtn.setDisable(true); // Disable the checkoutBtn if itemsList is empty
+        }
     }
 
-
-
-    private void createSamplePizza() {
-        Pizza pizza1 = new Pizza();
-        pizza1.setPizzaSize("small");
-        pizza1.setCrustOption(new Crust("deep"));
-        pizzaList.add(pizza1);
-    }
 }
 
