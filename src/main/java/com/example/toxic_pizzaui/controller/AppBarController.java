@@ -87,6 +87,8 @@ public class AppBarController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
     @FXML
     public void goToMain(){
         //Deletes the order and go to main menu
