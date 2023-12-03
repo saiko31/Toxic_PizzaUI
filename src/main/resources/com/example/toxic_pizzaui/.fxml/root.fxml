@@ -14,7 +14,7 @@
       <AnchorPane fx:id="screen" layoutY="58.0" prefHeight="743.0" prefWidth="1280.0" />
       <Pane prefHeight="58.0" prefWidth="1280.0" styleClass="appBar" stylesheets="@../.style/style.css">
          <children>
-            <Button layoutX="1187.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="58.0" prefWidth="79.0" styleClass="profileButton" stylesheets="@../.style/style.css">
+            <Button fx:id="cartBtn" layoutX="1187.0" mnemonicParsing="false" onAction="#goToCart" prefHeight="58.0" prefWidth="79.0" styleClass="profileButton" stylesheets="@../.style/style.css">
                <graphic>
                   <Pane prefHeight="50.0" prefWidth="74.0">
                      <children>

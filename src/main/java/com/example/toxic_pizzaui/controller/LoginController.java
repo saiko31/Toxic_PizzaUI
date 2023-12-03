@@ -28,14 +28,22 @@ public class LoginController {
 
 
     @FXML
-    private void signUp(ActionEvent e) throws IOException{                      //This will jump to the SignUp page in case the user wants to create a new account
+    private void signUp(ActionEvent e) throws IOException{                     //This will jump to the SignUp page in case the user wants to create a new account
         Tp_Utils.changeScene(e, "signUp.fxml");                         // Employee accounts will be registered by the manager, who will have a default login credentials, for now just leave it as *phoneNUM = admin and password = admin* for simplicity
     }
 
     @FXML
     private void login(ActionEvent event) throws IOException {
         if(PHONE_NUM_FIELD.getText().isBlank() == false && PASS_FIELD.getText().isBlank() == false){
-            Tp_Utils.changeScene(event, "root.fxml");
+
+            if(PHONE_NUM_FIELD.getText().equalsIgnoreCase("7701235816") && PASS_FIELD.getText().equalsIgnoreCase("password")){
+                Tp_Utils.changeScene(event, "root.fxml");
+            }
+            else{
+                messagePane.setVisible(true);                                               /*the password and the phone number in case nothing is typed in the log in page */
+                messageLabel.setText("Wrong password or Phone Number");
+            }
+
         }
         else{                                                                           /*This will display a message on the screen asking for*/
             messagePane.setVisible(true);                                               /*the password and the phone number in case nothing is typed in the log in page */

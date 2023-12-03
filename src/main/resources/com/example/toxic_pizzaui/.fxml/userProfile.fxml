@@ -26,7 +26,7 @@
                               <Font name="System Bold" size="55.0" />
                            </font>
                         </Label>
-                        <VBox layoutX="191.0" layoutY="146.0" prefHeight="67.0" prefWidth="901.0" AnchorPane.leftAnchor="191.0" AnchorPane.rightAnchor="191.0">
+                        <VBox layoutX="201.0" layoutY="185.0" prefHeight="67.0" prefWidth="901.0" stylesheets="@../.style/style.css" AnchorPane.leftAnchor="201.0" AnchorPane.rightAnchor="181.0">
                            <children>
                               <HBox prefHeight="48.0" prefWidth="901.0">
                                  <children>

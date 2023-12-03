@@ -49,6 +49,12 @@ public class CheckoutController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        //Disables the Cart button
+        AppBarController.getInstance().setCartBtn(true);
+
+
+
         pizzaList = OrderController.getOrder().getPizzaList();
         beveragesList = OrderController.getOrder().getBeveragesList();
 
@@ -109,8 +115,6 @@ public class CheckoutController implements Initializable {
     public void placeOrder(){
         AppBarController.getInstance().changeScreen("orderComplete.fxml");
     }
-
-
 
 
 }

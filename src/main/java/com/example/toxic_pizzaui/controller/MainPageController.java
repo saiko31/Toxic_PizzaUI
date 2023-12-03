@@ -36,6 +36,9 @@ public class MainPageController implements Initializable {
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
 
+        AppBarController.getInstance().setCartBtn(false);
+        AppBarController.getInstance().setProfileBtn(false);
+
     }
 
 

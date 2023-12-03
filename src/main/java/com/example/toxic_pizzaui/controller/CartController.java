@@ -75,5 +75,12 @@ public class CartController implements Initializable {
         }
     }
 
+
+    public void clear(){
+        System.out.println("Limpiando el carro");
+        itemsList.getChildren().clear();
+        checkoutBtn.setDisable(true);
+    }
+
 }
 

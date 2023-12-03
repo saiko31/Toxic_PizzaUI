@@ -29,6 +29,9 @@ public class AppBarController implements Initializable {
     @FXML
     private Button profileBtn;
 
+    @FXML
+    private Button cartBtn;
+
     private static AppBarController instance;
 
     private AnchorPane newPane;
@@ -67,6 +70,11 @@ public class AppBarController implements Initializable {
 
     public void setProfileBtn(Boolean active){
         profileBtn.setDisable(active);             // false = activate ; true = deactivate
+    }
+
+
+    public void setCartBtn(Boolean active){
+        cartBtn.setDisable(active);
     }
 
 
