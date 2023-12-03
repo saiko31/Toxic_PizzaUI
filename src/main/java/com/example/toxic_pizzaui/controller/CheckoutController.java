@@ -53,6 +53,8 @@ public class CheckoutController implements Initializable {
         //Disables the Cart button
         AppBarController.getInstance().setCartBtn(true);
 
+        CUSTOMER_NAME.setText("Jane Doe");
+
 
 
         pizzaList = OrderController.getOrder().getPizzaList();
@@ -82,10 +84,12 @@ public class CheckoutController implements Initializable {
         // If the order is store pick up, disable cash option
         if (!"In-Store Pickup".equalsIgnoreCase(deliveryOption)) {
             cashOption.setDisable(false);
+            CUSTOMER_ADDRESS.setText("123 Main Street, Marietta GA 30060");
         } else {
             cashOption.setText("Cash | Delivery Only");
             cashOption.setStyle("-fx-font-size: 12px;");
             cashOption.setDisable(true);
+
         }
     }
 
