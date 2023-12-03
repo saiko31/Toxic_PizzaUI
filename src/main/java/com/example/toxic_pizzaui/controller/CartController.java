@@ -6,6 +6,7 @@ import com.example.toxic_pizzaui.objects.Beverages;
 import com.example.toxic_pizzaui.objects.Crust;
 import com.example.toxic_pizzaui.objects.Order;
 import com.example.toxic_pizzaui.objects.Pizza;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -44,7 +45,8 @@ public class CartController implements Initializable {
     }
 
     @FXML
-    public void goToCheckout() {
+    public void goToCheckout(ActionEvent event) throws IOException {
+        Tp_Utils.changeScene(event,"checkout.fxml");
     }
 
     public static CartController getInstance() {
