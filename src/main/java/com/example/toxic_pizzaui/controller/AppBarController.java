@@ -2,6 +2,7 @@
 package com.example.toxic_pizzaui.controller;
 
 
+import com.example.toxic_pizzaui.DataHandling.OrderController;
 import com.example.toxic_pizzaui.Tp_Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -85,6 +86,12 @@ public class AppBarController implements Initializable {
         }catch(Exception e){
             e.printStackTrace();
         }
+    }
+    @FXML
+    public void goToMain(){
+        //Deletes the order and go to main menu
+        OrderController.resetOrder();
+        changeScreen("MainPage.fxml");
     }
 
     public AnchorPane getCartPane(){
