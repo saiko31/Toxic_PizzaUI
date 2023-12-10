@@ -11,33 +11,33 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1280.0" styleClass="purpleBackground" stylesheets="@../.style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.toxic_pizzaui.controller.SignUpController">
    <children>
-      <Pane layoutX="439.0" layoutY="140.0" prefHeight="548.0" prefWidth="403.0" styleClass="loginRectangle" stylesheets="@../.style/style.css">
+      <Pane layoutX="439.0" layoutY="140.0" prefHeight="485.0" prefWidth="403.0" styleClass="loginRectangle" stylesheets="@../.style/style.css">
          <children>
-            <Text fx:id="passwordMessage" fill="#c00000" layoutX="73.0" layoutY="264.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="warningPrompt" text="Password must have at least 8 characters,1 lower case, 1 upper case, and 1 number" textAlignment="CENTER" wrappingWidth="260.15576171875">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Text>
-            <PasswordField layoutX="76.0" layoutY="319.0" prefHeight="41.0" prefWidth="254.0" promptText="Password" styleClass="textfield">
+            <PasswordField layoutX="75.0" layoutY="259.0" prefHeight="41.0" prefWidth="254.0" promptText="Password" styleClass="textfield">
                <font>
                   <Font size="18.0" />
                </font>
             </PasswordField>
-            <PasswordField layoutX="76.0" layoutY="373.0" prefHeight="41.0" prefWidth="254.0" promptText="Confirm Password" styleClass="textfield">
+            <PasswordField layoutX="75.0" layoutY="313.0" prefHeight="41.0" prefWidth="254.0" promptText="Confirm Password" styleClass="textfield">
                <font>
                   <Font size="18.0" />
                </font>
             </PasswordField>
-            <Hyperlink layoutX="226.0" layoutY="493.0" onAction="#backBtn" style="-fx-text-fill: #762F85;" text="Log In" underline="true">
+            <Hyperlink layoutX="226.0" layoutY="430.0" onAction="#backBtn" style="-fx-text-fill: #762F85;" text="Log In" underline="true">
                <font>
                   <Font size="15.0" />
                </font>
             </Hyperlink>
-            <Text layoutX="125.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already a user?">
+            <Text layoutX="125.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already a user?">
                <font>
                   <Font size="15.0" />
                </font>
             </Text>
+            <Button fx:id="LOGIN_BUTTON" layoutX="93.0" layoutY="376.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="218.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Join Now">
+               <font>
+                  <Font name="Motiva Sans Test Bold" size="17.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
       <Text layoutX="491.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
@@ -60,10 +60,5 @@
             <Font name="Motiva Sans Test Regular" size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="LOGIN_BUTTON" layoutX="524.0" layoutY="589.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="218.0" styleClass="yellowButtons" stylesheets="@../.style/style.css" text="Join Now">
-         <font>
-            <Font name="Motiva Sans Test Bold" size="17.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

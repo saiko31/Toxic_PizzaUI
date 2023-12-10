@@ -36,7 +36,7 @@ public class LoginController {
     private void login(ActionEvent event) throws IOException {
         if(PHONE_NUM_FIELD.getText().isBlank() == false && PASS_FIELD.getText().isBlank() == false){
 
-            if(PHONE_NUM_FIELD.getText().equalsIgnoreCase("7701235816") && PASS_FIELD.getText().equalsIgnoreCase("password")){
+            if(PHONE_NUM_FIELD.getText() != null && PASS_FIELD.getText() != null){
                 Tp_Utils.changeScene(event, "root.fxml");
             }
             else{

@@ -39,8 +39,4 @@ public class userLoginData {
         return userAddress;
     }
 
-    //Not sure if an override method is needed for this data file
-    public static void main(String[] args){
-
-    }
 }
